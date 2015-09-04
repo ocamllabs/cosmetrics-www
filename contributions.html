@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+     <html xmlns="http://www.w3.org/1999/xhtml">
+     <head>
+     <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+     <!-- Load c3.css -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.css"
+     rel="stylesheet" type="text/css" />
+     <!-- Load d3.js and c3.js -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"
+     charset="utf-8"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"
+     ></script>
+     <style>
+.contributions .duration {
+                  color: #929295;
+                  padding-left: 2ex;
+                }
+</style>
+</head>
+<body>
+<h1>Number of contributors</h1>
+<div id="cosmetrics1" class="graph"></div>
+<script type="text/javascript">
+var y1 = new Array();
+y1['data0'] = [
+102., 92., 80., 79., 76., 65., 61., 51., 44., 43., 42., 42., 38., 36., 32., 28., 22., 21., 20., 20., 20., 20., 18., 17., 17., 17., 17., 17., 17., 17., 16., 16., 16., 16., 16., 16., 15., 15., 15., 15., 15., 15., 15., 15., 14., 14., 14., 14., 14., 14., 13., 13., 13., 12., 12., 12., 12., 12., 12., 12., 12., 12., 11., 11., 11., 11., 11., 10., 10., 10., 10., 10., 10., 10., 10., 10., 10., 9., 9., 9., 9., 9., 9., 8., 8., 8., 8., 8., 8., 8., 8., 8., 8., 8., 8., 7., 7., 7., 7., 7., 7., 7., 7., 7., 7., 7., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 6., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 4., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 3., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.];
+var chart1 = c3.generate({
+                   bindto: '#cosmetrics1',
+                   data: {
+                     x: 'x',
+                     columns: [
+                       ['x', 1., 2., 3., 4., 5., 6., 7., 8., 9., 10., 11., 12., 13., 14., 15., 16., 17., 18., 19., 20., 21., 22., 23., 24., 25., 26., 27., 28., 29., 30., 31., 32., 33., 34., 35., 36., 37., 38., 39., 40., 41., 42., 43., 44., 45., 46., 47., 48., 49., 50., 51., 52., 53., 54., 55., 56., 57., 58., 59., 60., 61., 62., 63., 64., 65., 66., 67., 68., 69., 70., 71., 72., 73., 74., 75., 76., 77., 78., 79., 80., 81., 82., 83., 84., 85., 86., 87., 88., 89., 90., 91., 92., 93., 94., 95., 96., 97., 98., 99., 100., 101., 102., 103., 104., 105., 106., 107., 108., 109., 110., 111., 112., 113., 114., 115., 116., 117., 118., 119., 120., 121., 122., 123., 124., 125., 126., 127., 128., 129., 130., 131., 132., 133., 134., 135., 136., 137., 138., 139., 140., 141., 142., 143., 144., 145., 146., 147., 148., 149., 150., 151., 152., 153., 154., 155., 156., 157., 158., 159., 160., 161., 162., 163., 164., 165., 166., 167., 168., 169., 170., 171., 172., 173., 174., 175., 176., 177., 178., 179., 180., 181., 182., 183., 184., 185., 186., 187., 188., 189., 190., 191., 192., 193., 194., 195., 196., 197., 198., 199., 200., 201., 202., 203., 204., 205., 206., 207., 208., 209., 210., 211., 212., 213., 214., 215., 216., 217., 218., 219., 220., 221., 222., 223., 224., 225., 226., 227., 228., 229., 230., 231., 232., 233., 234., 235., 236., 237., 238., 239., 240., 241., 242., 243., 244., 245., 246., 247., 248., 249., 250., 251., 252., 253., 254., 255., 256., 257., 258., 259., 260., 261., 262., 263., 264., 265., 266., 267., 268., 269., 270., 271., 272., 273., 274., 275., 276., 277., 278., 279., 280., 281., 282., 283., 284., 285., 286., 287., 288., 289., 290., 291., 292., 293., 294., 295., 296., 297., 298., 299., 300., 301., 302., 303., 304., 305., 306., 307., 308., 309., 310., 311., 312., 313., 314., 315., 316., 317., 318., 319., 320., 321., 322., 323., 324., 325., 326., 327., 328., 329., 330., 331., 332., 333., 334., 335., 336., 337., 338., 339., 340., 341., 342., 343., 344., 345., 346., 347., 348., 349., 350., 351., 352., 353., 354., 355., 356., 357., 358., 359., 360., 361., 362., 363., 364., 365., 366., 367., 368., 369., 370., 371., 372., 373., 374., 375., 376., 377., 378., 379., 380., 381., 382., 383., 384., 385., 386., 387., 388., 389., 390., 391., 392., 393., 394., 395., 396., 397., 398., 399., 400., 401., 402., 403., 404., 405., 406., 407., 408., 409., 410., 411., 412., 413., 414., 415., 416., 417., 418., 419., 420., 421., 422., 423., 424., 425., 426., 427., 428., 429., 430., 431., 432., 433., 434., 435., 436., 437., 438., 439., 440., 441., 442., 443., 444., 445., 446., 447., 448., 449., 450., 451., 452., 453., 454., 455., 456., 457., 458., 459., 460., 461., 462., 463., 464., 465., 466., 467., 468., 469., 470., 471., 472., 473., 474., 475., 476., 477., 478., 479., 480., 481., 482., 483., 484., 485., 486., 487., 488., 489., 490., 491., 492., 493., 494., 495., 496., 497., 498., 499., 500., 501., 502., 503., 504., 505., 506., 507., 508., 509., 510., 511., 512., 513., 514., 515., 516., 517., 518., 519., 520., 521., 522., 523., 524., 525., 526., 527., 528., 529., 530., 531., 532., 533., 534., 535., 536., 537., 538., 539., 540., 541., 542., 543., 544., 545., 546., 547., 548., 549., 550., 551., 552., 553., 554., 555., 556., 557., 558., 559., 560., 561., 562., 563., 564., 565., 566., 567., 568., 569., 570., 571., 572., 573., 574., 575., 576., 577., 578., 579., 580., 581., 582., 583., 584., 585., 586., 587., ],
+['data0', 2.00860017176, 1.96378782735, 1.90308998699, 1.89762709129, 1.88081359228, 1.81291335664, 1.78532983501, 1.7075701761, 1.64345267649, 1.63346845558, 1.6232492904, 1.6232492904, 1.57978359662, 1.55630250077, 1.50514997832, 1.44715803134, 1.34242268082, 1.32221929473, 1.30102999566, 1.30102999566, 1.30102999566, 1.30102999566, 1.2552725051, 1.23044892138, 1.23044892138, 1.23044892138, 1.23044892138, 1.23044892138, 1.23044892138, 1.23044892138, 1.20411998266, 1.20411998266, 1.20411998266, 1.20411998266, 1.20411998266, 1.20411998266, 1.17609125906, 1.17609125906, 1.17609125906, 1.17609125906, 1.17609125906, 1.17609125906, 1.17609125906, 1.17609125906, 1.14612803568, 1.14612803568, 1.14612803568, 1.14612803568, 1.14612803568, 1.14612803568, 1.11394335231, 1.11394335231, 1.11394335231, 1.07918124605, 1.07918124605, 1.07918124605, 1.07918124605, 1.07918124605, 1.07918124605, 1.07918124605, 1.07918124605, 1.07918124605, 1.04139268516, 1.04139268516, 1.04139268516, 1.04139268516, 1.04139268516, 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 0.954242509439, 0.954242509439, 0.954242509439, 0.954242509439, 0.954242509439, 0.954242509439, 0.903089986992, 0.903089986992, 0.903089986992, 0.903089986992, 0.903089986992, 0.903089986992, 0.903089986992, 0.903089986992, 0.903089986992, 0.903089986992, 0.903089986992, 0.903089986992, 0.845098040014, 0.845098040014, 0.845098040014, 0.845098040014, 0.845098040014, 0.845098040014, 0.845098040014, 0.845098040014, 0.845098040014, 0.845098040014, 0.845098040014, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.778151250384, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.698970004336, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.602059991328, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.47712125472, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0.301029995664, 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
+['data1', 195.219633873, 89.1978402778, 75.3502449846, 75.7198271605, 75.3502476852, 67.6021431327, 122.734543596, 86.6186689815, 32.8575142747, 83.1348966049, 59.9829490741, 60.1229297839, 245.234447531, 71.7501381173, 58.2972905093, 75.9991577932, 34.6276373457, 41.624847608, 30.2356508488, 30.2356508488, 30.2356508488, 20.6192438272, 32.6385559414, 38.981226466, 38.981226466, 38.981226466, 38.981226466, 38.981226466, 38.981226466, 72.270351466, 59.1813032407, 38.4484718364, 38.4484718364, 38.4484718364, 38.4484718364, 43.1873468364, 10.1664301697, 16.6570806327, 28.7431608796, 28.7431608796, 16.6570806327, 28.7431608796, 35.1527218364, 49.5365798611, 43.2540451389, 73.2138510802, 43.2540451389, 54.5454772377, 13.6547966821, 54.5454772377, 14.5674984568, 17.6218429784, 86.1666662809, 30.60953125, 37.8707469136, 152.406613426, 152.406613426, 45.8116921296, 45.8382503858, 46.8191728395, 83.5934598765, 28.8730451389, 38.6284297839, 29.3698792438, 29.3698792438, 65.1408622685, 12.0468869599, 30.6535084877, 59.692087963, 40.2915208333, 53.5278063272, 31.4034625772, 19.2342291667, 111.900519676, 17.9879008488, 43.7396300154, 61.9248946759, 68.6804444445, 53.5804212963, 25.2332368827, 71.4247318673, 39.0367353395, 54.2252523148, 19.8553530093, 11.5886940586, 21.9001909722, 29.1229633488, 70.3520277778, 66.9638468364, 48.1631493056, 40.96125, 27.9543954475, 30.005976466, 33.3601971451, 44.6258900463, 28.0334421296, 30.4245528549, 51.6935875772, 38.1106415895, 26.2346057099, 4.90182484568, 82.4376863426, 30.4245740741, 96.0283584105, 23.2971936728, 35.2995594136, 15.1915412809, 75.1880640432, 24.1890952932, 30.4245655864, 72.9640717593, 43.9583927469, 74.5205011574, 6.89675, 28.6970671296, 83.4919564043, 83.5722052469, 19.3265748457, 10.5927785494, 10.5927785494, 19.441246142, 18.2135991512, 10.3111743827, 61.124943287, 13.7082804784, 27.0841824846, 19.2918136574, 60.6233804012, 26.6599116512, 11.2799255401, 32.5316547068, 24.5673001543, 54.2460065586, 83.5726304012, 83.5868090278, 24.7144185957, 32.3037708333, 28.5520208333, 31.3534293981, 4.86995949075, 30.6904594907, 30.4245462963, 30.4245435957, 30.4245462963, 23.8306547068, 30.4245516975, 47.516248071, 58.5935516975, 17.602527392, 87.1385146605, 33.0012453704, 77.9315582562, 7.62146141975, 83.4938479938, 57.3004239969, 20.7349776234, 83.5880204475, 11.4907411265, 48.6169741512, 20.6872924383, 20.6872924383, 20.6872924383, 12.1173568673, 19.2201851852, 27.2337530864, 40.1598433642, 111.864462191, 83.5725860339, 22.584375, 45.0556531636, 25.748285108, 93.8691520062, 16.1665158179, 16.1665158179, 16.1665158179, 37.2550875771, 30.0218020833, 16.7002121914, 81.6191149691, 29.6308140432, 29.8563356481, 83.4921751543, 11.6753360339, 30.4245671296, 89.2843881173, 22.2716022377, 23.5633557099, 83.4932862654, 90.7645655864, 83.7388321759, 77.3636099537, 15.808162037, 15.1509776234, 83.5866909722, 17.4821261574, 34.2722256944, 31.4985613426, 39.760970679, 46.9531739969, 83.4919143518, 83.5727106481, 14.0073580247, 26.9040339506, 16.664150463, 54.2722858796, 16.1401354167, 77.0837472994, 83.4941442901, 19.4027349537, 17.6558460648, 45.4452604167, 6.59462191359, 17.1816824846, 20.9485794753, 82.7640837191, 23.830683642, 83.4957993827, 30.424558642, 64.1397677469, 83.4788047839, 85.5645960648, 16.5196396605, 11.6011496914, 83.5680432099, 57.1458576389, 22.0276068673, 15.1714683642, 19.3336300154, 109.820126543, 26.3449540895, 15.2922044753, 29.0030925926, 46.0432029321, 5.75734837962, 20.6238919753, 10.8313533951, 18.1409683642, 8.19761458333, 12.1136242284, 30.4828753858, 83.5881678241, 13.8909093364, 8.8032635031, 10.8313533951, 83.5727276235, 45.1868819444, 10.2979714506, 83.4933020833, 78.8070108025, 61.3010763889, 105.442230324, 11.200255787, 80.1893009259, 30.4245945216, 26.6310266204, 38.2068186728, 9.24661265432, 54.6456863426, 32.267001929, 27.5318364198, 32.2045559414, 27.1343333333, 26.3449540895, 13.6477098765, 129.17919946, 83.4935763889, 71.4203449074, 18.1544266975, 5.34461149691, 4.7759830247, 0.641178626552, 81.9430196759, 107.5498125, 4.59552546297, 23.7633063272, 68.6313510803, 26.8724957562, 16.2981188272, 3.8650790895, 89.0784297839, 5.93021797839, 58.1894089506, 15.5872881944, 17.3713699846, 17.8313414352, 1.39262191357, 5.27643711419, 6.53597530865, 84.4380609568, 18.8054849537, 18.8054849537, 3.10108873456, 8.03835956791, 13.5445393519, 21.9152137346, 49.7757638889, 60.1950150463, 1.27116049382, 85.3935844907, 40.2704382716, 6.11663888888, 45.4436103395, 4.20777121913, 13.5298537809, 65.8870111883, 45.3918838735, 20.368591821, 8.16207677469, 20.4228306327, 27.2839340278, 14.1943595679, 11.6034884259, 16.7871292438, 36.2550817901, 31.5856844136, 77.2988560957, 21.0756743827, 8.09692399691, 16.2981188272, 17.4951006944, 70.4327727623, 20.1406959877, 4.29920408951, 40.1076782408, 42.547560571, 9.86070100308, 25.6649691358, 26.5940806327, 13.1646682099, 1.51373919753, 8.12718132716, 2.95545447531, 25.7111986883, 0.570526620373, 2.30061496914, 1.88613271605, 14.2253935185, 33.3579575617, 0.0227272376574, 77.8382854938, 23.4391338735, 0.0845042438246, 6.18522955246, 51.555941358, 40.5264787809, 0.0146824845579, 17.7652229938, 13.4997727624, 0.332301697538, 1.26621604939, 5.0013881173, 7.33503858025, 6.10959413581, 88.0591643519, 12.6557758488, 7.12535262345, 34.9049899691, 34.8013622685, 15.7011068673, 29.9428452932, 18.4724375, 37.4280378086, 80.6530825617, 6.67110416667, 0.122090277774, 12.573816358, 33.1057827932, 10.7385435957, 27.7885999228, 6.43382098765, 17.2358125, 8.19850424384, 5.4676246142, 50.539943287, 5.67154899691, 35.9631766975, 7.86890162037, 5.35939197531, 2.34483796298, 8.1657654321, 8.67198263889, 3.98432600309, 8.6982326389, 23.6650408951, 17.2002554012, 2.52983487654, 2.3584845679, 3.69593364197, 21.3100694444, 58.0319000772, 6.0279544753, 23.064130787, 14.005441358, 0.00290779320831, 16.2682534722, 0.422452160499, 3.30334297839, 11.2719293981, 44.3640304784, 19.0293240741, 0.00128433642288, 0.0281207561648, 9.13357870369, 35.1709996142, 9.72320100308, 14.2833850309, 10.0326246142, 2.10274305556, 1.73080324074, 113.287248071, 15.9632766204, 16.2370451389, 12.6842384259, 6.50971952161, 10.1863969907, 18.5449247685, 1.71820987654, 5.86585300926, 1.12566936729, 6.10605208334, 2.4610459105, 5.69603510802, 25.6628722994, 7.53828125, 20.1625501543, 13.6172496142, 1.40654166667, 61.985160108, 36.3025115741, 7.93645717593, 8.13811844137, 31.63184375, 0.433976851854, 1.15676813272, 0.0864787808619, 0.110710262352, 8.69823649692, 35.335658179, 4.7907982253, 0.594844135797, 29.2317554012, 5.67154899691, 52.8537141204, 5.25709027778, 11.6011979167, 9.92683526234, 13.0671550926, 30.9591685957, 9.07461535494, 2.24261458333, 2.26722878086, 3.66761689815, 99.7592835648, 16.4648881173, 3.09548611112, 0.0182503858115, 30.7608680556, 13.7777750771, 58.6326076389, 21.6321639661, 21.5647596451, 10.3980216049, 1.1375945216, 1.27909336419, 10.9091049383, 102.756415509, 18.3390127315, 27.8488958333, 59.3628823302, 5.10141242285, 11.9139359568, 30.7102492284, 4.17367554012, 7.69840200618, 18.129150463, 2.66404475309, 0.420419753095, 0.732020447527, 121.097504244, 0.104189429013, 8.73193981481, 4.45474112655, 0.160411651231, 0.0599764660466, 7.77439467593, 0., 14.7061392747, 36.5782141204, 54.4616149691, 20.8309710648, 2.68702700618, 0.252941358012, 1.96632214507, 2.08939814816, 2.2165011574, 9.81884182099, 28.6269016204, 11.5194556327, 2.09943441359, 25.6393314043, 8.06513425927, 2.10001427469, 31.4068302469, 8.56319097223, 0.0601909722202, 64.6188900463, 34.4541369599, 86.9188742284, 78.7629124228, 9.59583950617, 0.0681269290237, 0.000532793207117, 0.0569263117387, 9.3245933642, 0.115443287029, 1.1302974537, 5.13908140433, 0.00433757716482, 4.07510416666, 6.66095717593, 1.86804513888, 30.4274293981, 0.0650135030815, 15.7095227624, 8.15207677468, 12.1546828704, 0.00476813271338, 2.24446373458, 27.9350925926, 9.30479089506, 1.04447492283, 0.0588510802481, 12.4862970679, 30.7027052469, 9.82523765432, 0.697174382722, 0.224287037039, 0.924192901235, 0., 1.6239834105, 22.9111508488, 0., 0.563542052467, 20.1608020833, 0.807392361108, 2.75255787037, 102.79721875, 0.0865860339564, 0.123040123455, 0.0623252314826, 46.4532283951, 0.173849151237, 20.9640385803, 69.4250027006, 8.63595408951, 105.103981867, 0.619182870382, 1.06006867285, 74.585525463, 0.174929783959, 0.0588175154292, 9.29784029722e-05, 18.0284189815, 14.3046176698, 5.07286574074, 1.20131327161, 0.000570216045335, 33.4198804012, 3.33020679012, 49.9839544753, 38.4281612654, 26.4506300154, 39.1112415123, 1.60707638888, 0.0706948302531, 20.4914884259, 0.000769290110763, 11.7773665123, 34.1179270833, 14.1524390432, 68.9974884259, 33.8380478395, 5.8763587963, 0.139462191363, 0.017115354926, 0.23444405864, 96.2282627315],
+],
+names: {
+data0: '# authors per repository',
+data1: 'lifetime (months)',
+},
+types: {
+data0: 'area',
+data1: 'line',
+},
+axes: {data0: 'y',data1: 'y2',},
+colors: {
+data0: '#336600',
+data1: '#CC6600',
+},
+},
+axis: {
+                  x: {
+label: 'repositories',
+                              tick: {
+                                fit: true,
+                                
+                              }
+
+                  },
+                  y: {
+                    label: '# authors',   },
+                  y2: {
+                    show: true,
+                    label: '',   }
+                },
+tooltip: {
+                   format: {
+                     value: function (value, ratio, id, index) {
+                       return (y1[id][index]); },
+                   }
+                 }
+})
+</script>
+<table class='contributions'>
+<tr><td>coq</td><td><span title='(no author), Alec Faithfull, Anders Kaseorg, Arnaud Spiwack, Assia Mahboubi, Benjamin Gregoire, Bruno Barras, Carst Tankink, Clément Pit--Claudel, Cyprien Mangin, Daniel R. Grayson, Enrico Tassi, Frédéric Besson, Gabriel Scherer, Gregory Malecha, Guillaume Claret, Guillaume Melquiond, Hugo Herbelin, Jason Gross, Jean-Christophe Filliatre, Julien Forest, Lionel Rieg, Matthieu Sozeau, Matěj Grabovský, Maxime Dénès, Nickolai Zeldovich, Pierre, Pierre Boutillier, Pierre Corbineau, Pierre Courtieu, Pierre Letouzey, Pierre-Marie Pédrot, Regis-Gianas, Stephane Glondu, Sébastien Hinderer, Theo Zimmermann, Thomas Refis, Thomas Sibut-Pinote, Virgile Prevosto, Xavier Clerc, Yann Régis-Gianas, Yves Bertot, amahboub, aspiwack, barras, barras-local, bertot, bgregoir, cek, clrenard, coq, corbinea, courant, courtieu, cpaulin, ddr, delahaye, desmettr, doligez, emakarov, fbesson, filliatr, fkirchne, forest, gareuselesinge, glondu, gmelquio, gregoire, herbelin, huang, jbapple, jforest, jnarboux, kirchner, letouzey, lmamane, marche, mayero, mdenes, miquel, mlasson, mohring, monate, msozeau, narboux, notin, notin,no-port-forwarding,no-agent-forwarding,no-X11-forwarding,no-pty, pboutill, pottier, ppedrot, puech, regisgia, roconnor, sacerdot, serpyc, soubiran, thery, thutchin, vgross, vsiles, werner, xclerc'>102</span></td><td class='duration'>≈ 195.2 months</td></tr>
+<tr><td>batteries</td><td><span title='Aaron Gallagher, Aleksey Z. Arens, Alp Mestan, Anders Fugmann, Anders Lau Olsen, Andreas Bogk, Anton Novikov, Ashish Agarwal, Cedric Cellier, Christoph Höger, Christopher Zimmermann, Daniel Gregoire, David Teller, Dawid Toton, Dmitry Grebeniuk, Drup, Edgar Friendly, Edward J. Schwartz, Eric Norige, Erick Tryzelaar, Erkki Seppala, Erkki Seppälä, Fourchaux, Francois BERENGER, Francois Berenger, Gabriel, Gabriel Kerneis, Gabriel Scherer, Geoff Hulette, Glyn Webster, Herry, Hezekiah M. Carty, Jacques-Pascal Deplaix, Jonas Jensen, Justus Matthiesen, Jérémie Dimino, Kaustuv Chaudhuri, Kensuke Matsuzaki, Kevin Brubeck Unhammer, Mads Hartmann, Martin Jambon, Mauricio Fernandez, Max Mouratov, Mehdi Dogguy, Michael D Ekstrand, Michael Ekstrand, Michael Lin, Moncef Baazet, Nicolas Braud-Santoni, Oleg Tsarev, Paolo Donadeo, Paul Pelzl, Pedro Borges, Peng Zang, Peter Minten, Philippe, Quentin Stievenart, Ralf Vogler, Roman Sokolov, Rudi Grinberg, Sang Kil Cha, Sebastien Mondet, Serge Ziryukin, Sergey Plaksin, Seung Cheol Jung, Simon Castellan, Simon Cruanes, Stefano Zacchiroli, Stephane Glondu, Sylvain Le Gall, Thibault Suzanne, Tiphaine Turpin, Valentin Gatien-Baron, Victor Nicollet, Vincent Bernardoff, Vincent Hugot, Vladimir Ivanov, Warren Harris, Yoric, ben kuin, ben le kuin, bluestorm, cedric cellier, fdopen, gallais, jathd, nukiFW, pveber, thelema, wistery-k, ygrek, yoric'>92</span></td><td class='duration'>≈ 89.2 months</td></tr>
+<tr><td>xapi-networkd</td><td><span title='Akshay Ramani, Alex Zeffert, Alex Zeffertt, Andrei Lifchits, Andrew Cooper, Andrew Eross, Andrew Evans, Andrew Peace, Anil Madhavapeddy, Ben Pfaff, Bob Ball, Daniel Stodden, Dave Scott, David Scott, David Tsai, David Vrabel, Ethan Jackson, Euan Harris, Ewan Mellor, Frediano Ziglio, George Dunlap, George Shuklin, Gianni Tedesco, Guillem Rieu, Henry Hughes, Ian Campbell, Ian Hickey, James Bulpin, Javier Alvarez-Valle, Javier-Alvarez-Valle@citrix.com, Javier.Alvarez-Valle@citrix.com, Jerome Maloberti, John Else, Jon Ludlam, Jonathan Davies, Jonathan Knowles, Jonathan Ludlam, Justin Pettit, Katie Lucas, Konstantina Chremmou, Koushik Chakravarty, Magnus Therning, Marcus Granado, MarcusG, Matthias Goergens, Matthias Goergnes, Mattias Linnap, Mike McClurg, Miëtek Bak, Paul Durrant, Peter Westlake, Rabin Karki, Ravi Kondamuru, Ravi Pandey, Rob Hoes, Roger Cruz, Rok Strnisa, Rok Strniša, Santosh Jodh, Sharad Yadav, Si Beaumont, Siddharth Vinothkumar, Simon Rowe, Stephen Turner, Ted M Lin, Thomas Gazagnaire, Thomas Sanders, Tim Deegan, Vincent Bernardoff, Vincent Hanquez, Xen Git User, Xen hg user, Yang Hongyang, Zheng Li, Zoltan Kiss, javier.alvarez-valle@citrix.com, magnus.therning@citrix.com, sharad yadav, stephen.rice@eu.citrix.com, stephentu@eli.uk.xensource.com'>80</span></td><td class='duration'>≈ 75.4 months</td></tr>
+<tr><td>xapi-rrdd</td><td><span title='Akshay Ramani, Alex Zeffert, Alex Zeffertt, Andrei Lifchits, Andrew Cooper, Andrew Eross, Andrew Evans, Andrew Peace, Anil Madhavapeddy, Ben Pfaff, Bob Ball, Daniel Stodden, Dave Scott, David Scott, David Tsai, David Vrabel, Ethan Jackson, Euan Harris, Ewan Mellor, Frediano Ziglio, George Dunlap, George Shuklin, Gianni Tedesco, Guillem Rieu, Henry Hughes, Ian Campbell, Ian Hickey, James Bulpin, Javier Alvarez-Valle, Javier-Alvarez-Valle@citrix.com, Javier.Alvarez-Valle@citrix.com, Jerome Maloberti, John Else, Jon Ludlam, Jonathan Davies, Jonathan Knowles, Jonathan Ludlam, Justin Pettit, Kaifeng Zhu, Katie Lucas, Koushik Chakravarty, Magnus Therning, Marcus Granado, MarcusG, Matthias Goergens, Matthias Goergnes, Mattias Linnap, Mike McClurg, Miëtek Bak, Paul Durrant, Peter Westlake, Rabin Karki, Ravi Pandey, Rob Hoes, Roger Cruz, Rok Strnisa, Rok Strniša, Santosh Jodh, Sharad Yadav, Si Beaumont, Siddharth Vinothkumar, Simon Rowe, Stephen Turner, Ted M Lin, Thomas Gazagnaire, Thomas Sanders, Tim Deegan, Vincent Bernardoff, Vincent Hanquez, Xen Git User, Xen hg user, Yang Hongyang, Zheng Li, Zoltan Kiss, javier.alvarez-valle@citrix.com, magnus.therning@citrix.com, sharad yadav, stephen.rice@eu.citrix.com, stephentu@eli.uk.xensource.com'>79</span></td><td class='duration'>≈ 75.7 months</td></tr>
+<tr><td>xapi-squeezed</td><td><span title='Akshay Ramani, Alex Zeffert, Alex Zeffertt, Andrei Lifchits, Andrew Cooper, Andrew Eross, Andrew Evans, Andrew Peace, Anil Madhavapeddy, Ben Pfaff, Bob Ball, Cheng Zhang, Chunjie Zhu, Daniel Stodden, Dave Scott, David Scott, David Tsai, David Vrabel, Ethan Jackson, Euan Harris, Ewan Mellor, Frediano Ziglio, George Dunlap, George Shuklin, Gianni Tedesco, Guillem Rieu, Henry Hughes, Ian Campbell, Ian Hickey, James Bulpin, Javier Alvarez-Valle, Javier-Alvarez-Valle@citrix.com, Javier.Alvarez-Valle@citrix.com, Jerome Maloberti, John Else, Jon Ludlam, Jonathan Davies, Jonathan Knowles, Jonathan Ludlam, Justin Pettit, Katie Lucas, Magnus Therning, Marcus Granado, MarcusG, Matthias Goergens, Matthias Goergnes, Mattias Linnap, Mike McClurg, Miëtek Bak, Paul Durrant, Peter Westlake, Rabin Karki, Rob Hoes, Roger Cruz, Rok Strnisa, Rok Strniša, Santosh Jodh, Si Beaumont, Siddharth Vinothkumar, Simon Rowe, Stephen Turner, Ted M Lin, Thomas Gazagnaire, Thomas Sanders, Tim Deegan, Vincent Bernardoff, Vincent Hanquez, Xen Git User, Xen hg user, Yang Hongyang, Zheng Li, Zoltan Kiss, javier.alvarez-valle@citrix.com, magnus.therning@citrix.com, stephen.rice@eu.citrix.com, stephentu@eli.uk.xensource.com'>76</span></td><td class='duration'>≈ 75.4 months</td></tr>
+<tr><td>js_of_ocaml</td><td><span title='Alain Frisch, Ali-Firat Kilic, ArnaudParant, Ben Noordhuis, Benedikt Becker, Chua Jie Sheng, Daniel Bünzli, David Maison, David Scott, Drup, Enguerrand Decorne, Fabrice Le Fessant, Florent Becker, Gabe Levi, Gregoire.Henry, Grégoire Henry, Hugo Heuzard, Jacques-Pascal Deplaix, Jerome Vouillon, Jon Ludlam, Julian Brown, Kensuke Matsuzaki, Kevin Brubeck Unhammer, Kilic, Matthieu Dubuget, Maxence Guesdon, Michael O\'Connor, Petter Urkedal, Philippe Veber, Pierre Chambart, Rudi Grinberg, Ryan Goulden, Sebastien Briais, Simon Marc, Stephane Glondu, Stéphane Legrand, Tomohiro Matsuyama, Vincent Balat, Vladimir Keleshev, andrewray, balat at pps.jussieu.fr, benjamin.canou, besport, cagdas.bozman, chambart, eaubin, gregoire.henry, hheuzard, hhugo, jerome.vouillon, kakadu, kakadu.hafanana, michaell.laporte, mseverine, pierre.chambart, pveber, raphael proust, raphlalou, remyzorg, vincent.balat, vincent.balat at pps.jussieu.fr, vincent.balat at univ-paris-diderot.fr, woxtu, zol, Çağdaş Bozman'>65</span></td><td class='duration'>≈ 67.6 months</td></tr>
+<tr><td>tyxml</td><td><span title='Benedikt Becker, Drup, Eyyub, Florent Becker, Gabriel Kerneis, Gabriel Kerneis gabriel AT kerneis POINT info, Gabriel Radanne, Gregoire.Henry, Gregoire.Henry at pps.jussieu.fr, Grégoire Henry, Hugo Heuzard, Jaap Boender, Jaap.Boender at pps.jussieu.fr, Jacques-Pascal Deplaix, Janne Hellsten, Jerome Vouillon, Jerome.Vouillon, Kevin Brubeck Unhammer, Mauricio Fernandez, Philippe Veber, Stephane Glondu, Thad Meyer, Vasilis Papavasileiou, Vincent Balat, William Le Ferrand, archiblad.p, balat at pps.jussieu.fr, balat.at.pps.jussieu.fr, benjamin.canou, besport, boris, cecile.herbelin at etudiant.univ-lille1.fr, chambart, darioteixeira, darioteixeira at yahoo.com, gabriel AT kerneis DOT info, gabriel.radanne, gregoire.henry, henry at pps.jussieu.fr, jaapb at kerguelen.org, jerome.vouillon, jj, kerneis, kerneis (a) enst (dot) fr, kerneis AT pps.jussieu.fr, kerneis(a)pps.jussieu.fr, martin.bahier, michaell.laporte, nyuguts, pveber, raphael, raphael proust, remyzorg, simon.castellan at iuwt dot fr, steph, tmeyer, velleine.jerome, vincent.balat, vincent.balat at univ-paris-diderot.fr, vouillon at pps.jussieu.fr, zol'>61</span></td><td class='duration'>≈ 122.7 months</td></tr>
+<tr><td>lwt</td><td><span title='Anil Madhavapeddy, Ashish Agarwal, Berke Durak, Christiano F. Haesbaert, Damien Doligez, Daniel Bünzli, Dmitry Grebeniuk, Drup, Gabriel Scherer, Grégoire Henry, Hannes Mehnert, Hezekiah M. Carty, Hugo Heuzard, Jacques-Pascal Deplaix, Jeremie Dimino, Jerome Vouillon, Jonathan Davies, Jérémie Dimino, Marek Kubica, Mauricio Fernandez, Maxence Guesdon, Nicolas Dandrimont, Nicolas Ojeda Bar, Peter Zotov, Pierre Chambart, Pierre-Malo Deniélou, Quentin Stievenart, Rich Neswold, Romain Slootmaekers, Rudi Grinberg, Simon Cruanes, Stephane Glondu, Thomas Leonard, Tim Cuthbertson, Vincent Bernardoff, William Le Ferrand, Zoggy, arirux, balat at pps.jussieu.fr, balat at univ-paris-diderot.fr, chambart, fdopen, gregoire.henry, jerome.vouillon, kerneis, michaell.laporte, pveber, raphael proust, vouillon at pps.jussieu.fr, ygrek, zol'>51</span></td><td class='duration'>≈ 86.6 months</td></tr>
+<tr><td>frenetic</td><td><span title='Andrew Ferguson, Arjun Guha, Bryan Cuccioli, Chris Yu, Cole Schlesinger, Craig Riecke, David Walker, Elias Mulhall, Jedidiah McClurg, Jung Hyun Eun, Junghyun Eun, Karla Saur, Laurent Vanbever, Marco Canini, Mark Reitblatt, Matthew Milano, Matthew and Rebecca, Michael Scheer, Nate Foster, Nick Braga, Nimish Gupta, Rebecca Coombes, Rebecca and Matthew, Richard Mortier, Robert Soule, Shrutarshi Basu, Spiros Eliopoulos, Steffen Juilf Smolka, Steffen Smolka, Thien Duc Nguyen, Tu Dang, canders1, craig-riecke, ekotlikoff, jcollard, junghyuneun, koleini, ksaur, mininet, mininet-dev, moey509, mulhalle, nimishgupta, sushkrish'>44</span></td><td class='duration'>≈ 32.9 months</td></tr>
+<tr><td>beluga</td><td><span title='Agata Murawska, Aidan MARCHILDON, Aidan Marchildon, Ali ASSAF, Andrew Cave, Brigitte PIENTKA, Brigitte Pientka, Costin BADESCU, Costin Badescu, Costin Bădescu, Costin Bǎdescu, Darin Morrison, David Thibodeau, Esma Balkir, Francisco Ferreira, Joshua Dunfield, Kirchner, Kirchner DIMITRI, Leah WEINER, Marie-Andree B.Langlois, Mathieu Boespflug, Matthias Puech, Olivier (ˆ◡ˆ), Olivier SAVARY, Olivier Savary B, Olivier Savary Belanger, Renaud Germain, Research Group COMPLOGIC, Rohan Jacob Rao, Rohan Jacob-Rao, Ryan Kavanagh, Scott Cooper, Shen Chen XU, Sherry, Stefan Knudsen, Stefan Monnier, Steven Thephsourinthone, Tao, Thinkpad, osavaryb, rcog, scott, taoxue'>43</span></td><td class='duration'>≈ 83.1 months</td></tr>
+<tr><td>mirage-www</td><td><span title='Alexander Dinu, Amir Chaudhry, Anil Madhavapeddy, Arnout Engelen, Balraj Singh, Christine Koppelt, Christophe Troestler, Daniel Bünzli, David Scott, Gabor Pali, Gabriel McArthur, Gabriel de Perthuis, Hannes Mehnert, Heidi-ann, Hendrik Volkmer, Jeremy Thurgood, Jeremy Yallop, Jon Ludlam, Jyotsna Prakash, Luke Dunstan, Magnus Skjegstad, Mark Thurman, MatOchal, Matt Gray, Mike McClurg, Mindy Preston, Nik Sultana, Raphael Proust, Raphaël Proust, Richard Mortier, Sean Leather, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, btbytes, buzzheavyyear@users.noreply.github.com, lnmx, manu, nick, pqwy, samoht, voila'>42</span></td><td class='duration'>≈ 60.0 months</td></tr>
+<tr><td>pfff</td><td><span title='Alex Suhan, Alok Menghrajani, Anthony Ramine, Antoine Musso, Avik Chaudhuri, Ciara Proctor, Eugene Letuchy, Gabe Levi, Holden Karau, Jason Davies, JeffMo, Jez Ng, Jiao Li, Josh Watzman, Juergen Hoetzel, Kenn Knowles, M.Yasoob Ullah Khalid ☺, Marcus Holland-Moritz, Michael Sullivan, Michael Tibben, Mike Shema, Pierre-Malo Deniélou, Pieter Hooimeijer, Robert Smith, Stanislav Sedov, Stelian Mocanita, Tuncer Ayaz, Weltraumschaf, Wez Furlong, Yoann Padioleau, Zoe Cat, akuhn, amirshim, andrewparoski, bill fumerola, doligez, hanson.wang, hansonw, julienv, pad, pieter@fb.com, yoann padioleau'>42</span></td><td class='duration'>≈ 60.1 months</td></tr>
+<tr><td>camlp4</td><td><span title='Alain Frisch, Anil Madhavapeddy, Basile Starynkevitch, Benedikt Meurer, Bruno Verlyck, Damien Doligez, Daniel de Rauglaudre, David Allsopp, Didier Rémy, Fabrice Le Fessant, Francois Pessaux, Francois Rouaix, Gabriel Scherer, Hongbo Zhang, Jacques Garrigue, Jacques Le Normand, Jeremie Dimino, Jeremy Yallop, Jonathan Protzenko, Jun FURUSE / 古瀬 淳, Jérémie Dimino, Jérôme Vouillon, Luc Maranget, Mark Shinwell, Max Mouratov, Maxence Guesdon, Michel Mauny, Nicolas Pouillard, No author, Olaf Hering, Peter Zotov, Pierre Habouzit, Pierre Weis, Rudi Grinberg, Thomas Gazagnaire, Wojciech Meyer, Xavier Clerc, Xavier Leroy'>38</span></td><td class='duration'>≈ 245.2 months</td></tr>
+<tr><td>cohttp</td><td><span title='A. Hauptmann, Anil Madhavapeddy, Christophe Troestler, Clark Gaebel, Daniel Patterson, David Scott, David Sheets, Drill Bear, Drup, Gabor Pali, Hannes Mehnert, Jake Donham, Jeremy Yallop, Josh Allmann, Jyotsna Prakash, Marek Kubica, Martin Jambon, Michael O\'Connor, Mika Illouz, Nicolas Ojeda Bar, Pierre Chambart, Romain Calascibetta, Rudi Grinberg, Runhang Li, SGrondin, Spiros Eliopoulos, Stanislav Artemkin, The Gitter Badger, Thomas Gazagnaire, Thomas Leonard, Tomohiro Matsuyama, Trevor Summers Smith, Török Edwin, Vincent Bernardoff, William Le Ferrand, andrewray'>36</span></td><td class='duration'>≈ 71.8 months</td></tr>
+<tr><td>arakoon</td><td><span title='Carl D\'Halluin, Incubaid, Jan, Jan Doms, Jens Geiregat, Jonas Geiregat, Joost Yervante Damad, Kenneth Henderick, Kurt Bonne, Lien Boelaert, Mahmoud Ali Amplidata-Cairo , Mark Christiaens, Mohab Usama, Nicolas, Nicolas Trangez, PyLabs, Romain Slootmaekers, Ruben De Zaeytijd, Wim Provoost, blackmath, blackmath86, bonnek, cflap0019\Wim Provoost, dewolft, geiregjo, kbonne, pdeclerc, romain, root, tdeconin, tom, toolslive'>32</span></td><td class='duration'>≈ 58.3 months</td></tr>
+<tr><td>xapi-forkexecd</td><td><span title='Anil Madhavapeddy, Daniel Stodden, Dave Scott, David Scott, Ewan Mellor, Ian Campbell, Jerome Maloberti, John Else, Jon Ludlam, Jonathan Davies, Jonathan Knowles, Jonathan Ludlam, Magnus Therning, Marcus Granado, MarcusG, Matthias Goergens, Mike McClurg, Paul Durrant, Rob Hoes, Rok Strnisa, Rok Strniša, Si Beaumont, Thomas Gazagnaire, Thomas Sanders, Vincent Hanquez, Xen hg user, Yang Hongyang, Zheng Li'>28</span></td><td class='duration'>≈ 76.0 months</td></tr>
+<tr><td>xapi-xenopsd</td><td><span title='Akshay, Andrew Cooper, Anil Madhavapeddy, Bob Ball, Cheng Sun, Cheng Zhang, Chunjie Zhu, David Scott, Euan Harris, Hui Zhang, John Else, Jon Ludlam, Koushik Chakravarty, Marcus Granado, Mike McClurg, Phus Lu, Ravi Pandey, Rob Hoes, Si Beaumont, Thomas Sanders, chengz, thomassa'>22</span></td><td class='duration'>≈ 34.6 months</td></tr>
+<tr><td>ocp-indent</td><td><span title='Christopher Zimmermann, David Sheets, Fabrice Le Fessant, Frederic Bour, Grégoire Henry, Hugo Heuzard, Ivan Gotovchits, Kaustuv Chaudhuri, Louis Gesbert, Mickaël Delahaye, Nicolas Ojeda Bar, Peter Szilagyi, Pierre Chambart, Quentin Stievenart, Raphaël Proust, Rudi Grinberg, Syohei YOSHIDA, Thomas Gazagnaire, Tony Narlock, Vincent Bernardoff, Yaron Minsky'>21</span></td><td class='duration'>≈ 41.6 months</td></tr>
+<tr><td>mirage</td><td><span title='Anil Madhavapeddy, David Scott, David Sheets, Drup, Gabor Pali, Hannes Mehnert, Jussi Virtanen, Jyotsna Prakash, Magnus Skjegstad, Mike McClurg, Mindy Preston, Nicolas Ojeda Bar, Petter Urkedal, Richard Mortier, Roma Sokolov, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, lnmx, pqwy'>20</span></td><td class='duration'>≈ 30.2 months</td></tr>
+<tr><td>mirage-types</td><td><span title='Anil Madhavapeddy, David Scott, David Sheets, Drup, Gabor Pali, Hannes Mehnert, Jussi Virtanen, Jyotsna Prakash, Magnus Skjegstad, Mike McClurg, Mindy Preston, Nicolas Ojeda Bar, Petter Urkedal, Richard Mortier, Roma Sokolov, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, lnmx, pqwy'>20</span></td><td class='duration'>≈ 30.2 months</td></tr>
+<tr><td>mirage-types-lwt</td><td><span title='Anil Madhavapeddy, David Scott, David Sheets, Drup, Gabor Pali, Hannes Mehnert, Jussi Virtanen, Jyotsna Prakash, Magnus Skjegstad, Mike McClurg, Mindy Preston, Nicolas Ojeda Bar, Petter Urkedal, Richard Mortier, Roma Sokolov, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, lnmx, pqwy'>20</span></td><td class='duration'>≈ 30.2 months</td></tr>
+<tr><td>openflow</td><td><span title='Andrew Ferguson, Arjun Guha, Bryan Cuccioli, Cole Schlesinger, Joseph Collard, Karla Saur, Laurent Vanbever, Marco Canini, Mark Reitblatt, Nate Foster, Nimish Gupta, Richard Mortier, Robert Soule, Shrutarshi Basu, Spiros Eliopoulos, Thien Duc Nguyen, ekotlikoff, jcollard, mininet, mininet-dev'>20</span></td><td class='duration'>≈ 20.6 months</td></tr>
+<tr><td>xapi-idl</td><td><span title='Bob Ball, Cheng Sun, Chunjie Zhu, Dave Scott, David Scott, Euan Harris, Hui Zhang, John Else, Jon Ludlam, Koushik Chakravarty, Mike McClurg, Ravi Pandey, Rob Hoes, Sharad Yadav, Si Beaumont, Vincent Bernardoff, chengz, sharad yadav'>18</span></td><td class='duration'>≈ 32.6 months</td></tr>
+<tr><td>mirage-net</td><td><span title='Anil Madhavapeddy, Balraj Singh, David Scott, Drup, Gabor Pali, Hannes Mehnert, Haris Rotsos, Luke Dunstan, Magnus Skjegstad, Mindy Preston, Nicolas Ojeda Bar, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, crotsos, lnmx, pqwy'>17</span></td><td class='duration'>≈ 39.0 months</td></tr>
+<tr><td>mirage-net-direct</td><td><span title='Anil Madhavapeddy, Balraj Singh, David Scott, Drup, Gabor Pali, Hannes Mehnert, Haris Rotsos, Luke Dunstan, Magnus Skjegstad, Mindy Preston, Nicolas Ojeda Bar, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, crotsos, lnmx, pqwy'>17</span></td><td class='duration'>≈ 39.0 months</td></tr>
+<tr><td>mirage-net-socket</td><td><span title='Anil Madhavapeddy, Balraj Singh, David Scott, Drup, Gabor Pali, Hannes Mehnert, Haris Rotsos, Luke Dunstan, Magnus Skjegstad, Mindy Preston, Nicolas Ojeda Bar, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, crotsos, lnmx, pqwy'>17</span></td><td class='duration'>≈ 39.0 months</td></tr>
+<tr><td>mirage-tcpip-unix</td><td><span title='Anil Madhavapeddy, Balraj Singh, David Scott, Drup, Gabor Pali, Hannes Mehnert, Haris Rotsos, Luke Dunstan, Magnus Skjegstad, Mindy Preston, Nicolas Ojeda Bar, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, crotsos, lnmx, pqwy'>17</span></td><td class='duration'>≈ 39.0 months</td></tr>
+<tr><td>mirage-tcpip-xen</td><td><span title='Anil Madhavapeddy, Balraj Singh, David Scott, Drup, Gabor Pali, Hannes Mehnert, Haris Rotsos, Luke Dunstan, Magnus Skjegstad, Mindy Preston, Nicolas Ojeda Bar, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, crotsos, lnmx, pqwy'>17</span></td><td class='duration'>≈ 39.0 months</td></tr>
+<tr><td>tcpip</td><td><span title='Anil Madhavapeddy, Balraj Singh, David Scott, Drup, Gabor Pali, Hannes Mehnert, Haris Rotsos, Luke Dunstan, Magnus Skjegstad, Mindy Preston, Nicolas Ojeda Bar, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, crotsos, lnmx, pqwy'>17</span></td><td class='duration'>≈ 39.0 months</td></tr>
+<tr><td>xapi-xenops</td><td><span title='Daniel Stodden, Dave Scott, David Scott, Euan Harris, Ian Campbell, John Else, Jon Ludlam, Jonathan Knowles, Jonathan Ludlam, MarcusG, Paul Durrant, Rob Hoes, Roger Cruz, Si Beaumont, Thomas Gazagnaire, Vincent Hanquez, Xen hg user'>17</span></td><td class='duration'>≈ 72.3 months</td></tr>
+<tr><td>KaSim</td><td><span title='Hector Urbina, Jean Krivine, Jerome Feret, Jérôme Feret, Krivine, Ly Kim Quyen, Mitchell Johnson, Pierre Boutillier, Vincent Danos, ajendrex, feret, jkrivine, krivine, lykimquyen, quyen, vd1'>16</span></td><td class='duration'>≈ 59.2 months</td></tr>
+<tr><td>mirage-unix</td><td><span title='Amir Chaudhry, Anil Madhavapeddy, Balraj Singh, David Scott, Gabor Pali, Hannes Mehnert, Haris Rotsos, James Bielman, Jon Ludlam, Petter Urkedal, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, crotsos, lnmx, pqwy'>16</span></td><td class='duration'>≈ 38.4 months</td></tr>
+<tr><td>mirage-xen</td><td><span title='Amir Chaudhry, Anil Madhavapeddy, Balraj Singh, David Scott, Gabor Pali, Hannes Mehnert, Haris Rotsos, James Bielman, Jon Ludlam, Petter Urkedal, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, crotsos, lnmx, pqwy'>16</span></td><td class='duration'>≈ 38.4 months</td></tr>
+<tr><td>mirage-xen-ocaml</td><td><span title='Amir Chaudhry, Anil Madhavapeddy, Balraj Singh, David Scott, Gabor Pali, Hannes Mehnert, Haris Rotsos, James Bielman, Jon Ludlam, Petter Urkedal, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, crotsos, lnmx, pqwy'>16</span></td><td class='duration'>≈ 38.4 months</td></tr>
+<tr><td>mirage-xen-posix</td><td><span title='Amir Chaudhry, Anil Madhavapeddy, Balraj Singh, David Scott, Gabor Pali, Hannes Mehnert, Haris Rotsos, James Bielman, Jon Ludlam, Petter Urkedal, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, crotsos, lnmx, pqwy'>16</span></td><td class='duration'>≈ 38.4 months</td></tr>
+<tr><td>re</td><td><span title='Anil Madhavapeddy, Christian Lindig, David Sheets, Drup, Haris Rotsos, Heidi-ann, Jacques-Pascal Deplaix, Jeremy Yallop, Jerome Vouillon, Jérôme Vouillon, Mehdi Dogguy, Nicolas Braud-Santoni, Rudi Grinberg, Simon Cruanes, Thomas Gazagnaire, Vincent Bernardoff'>16</span></td><td class='duration'>≈ 43.2 months</td></tr>
+<tr><td>bap</td><td><span title='David Brumley, Dominic Chen, Ivan Gotovchits, Kenneth Adam Miller, Matthew Maurer, Maverick Woo, Oleg, Rijnard, Rijnard van Tonder, Ryan Goulden, The Gitter Badger, Tiffany Bao, Tim Becker, feseal, nikita-git'>15</span></td><td class='duration'>≈ 10.2 months</td></tr>
+<tr><td>conduit</td><td><span title='Amir Chaudhry, Anil Madhavapeddy, Arjun Guha, Christophe Troestler, David Scott, David Sheets, Hannes Mehnert, Jyotsna, Romain Calascibetta, Sebastien Mondet, Thomas Gazagnaire, Thomas Leonard, Trevor Summers Smith, Török Edwin, darioteixeira'>15</span></td><td class='duration'>≈ 16.7 months</td></tr>
+<tr><td>irmin</td><td><span title='Alex Zatelepin, Anil Madhavapeddy, Christophe Troestler, Damien Doligez, David Scott, David Sheets, Grégoire Henry, Jeremy Yallop, Magnus Skjegstad, Masoud Koleini, Mindy Preston, Nik Sultana, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff'>15</span></td><td class='duration'>≈ 28.7 months</td></tr>
+<tr><td>irmin-unix</td><td><span title='Alex Zatelepin, Anil Madhavapeddy, Christophe Troestler, Damien Doligez, David Scott, David Sheets, Grégoire Henry, Jeremy Yallop, Magnus Skjegstad, Masoud Koleini, Mindy Preston, Nik Sultana, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff'>15</span></td><td class='duration'>≈ 28.7 months</td></tr>
+<tr><td>mirage-conduit</td><td><span title='Amir Chaudhry, Anil Madhavapeddy, Arjun Guha, Christophe Troestler, David Scott, David Sheets, Hannes Mehnert, Jyotsna, Romain Calascibetta, Sebastien Mondet, Thomas Gazagnaire, Thomas Leonard, Trevor Summers Smith, Török Edwin, darioteixeira'>15</span></td><td class='duration'>≈ 16.7 months</td></tr>
+<tr><td>mirage-irmin</td><td><span title='Alex Zatelepin, Anil Madhavapeddy, Christophe Troestler, Damien Doligez, David Scott, David Sheets, Grégoire Henry, Jeremy Yallop, Magnus Skjegstad, Masoud Koleini, Mindy Preston, Nik Sultana, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff'>15</span></td><td class='duration'>≈ 28.7 months</td></tr>
+<tr><td>opam2web</td><td><span title='Anil Madhavapeddy, Christophe Troestler, David Sheets, Fabrice Le Fessant, Guillem Rieu, Louis Gesbert, Pierre Chambart, Roberto Di Cosmo, Thomas Gazagnaire, Vincent Bernardoff, cago, sgoblin, venator, webmaster@ocamlpro.com, Çagdas Bozman'>15</span></td><td class='duration'>≈ 35.2 months</td></tr>
+<tr><td>utop</td><td><span title='Daniel Bünzli, Jeremie Dimino, Jérémie Dimino, Mads Hartmann Jensen, Martin Trojer, Matthias Andreas Benkard, Maverick Woo, Peter Zotov, Sebastian Wiesner, Thomas Refis, anil, lehy, pveber, whitequark, wojciech.meyer'>15</span></td><td class='duration'>≈ 49.5 months</td></tr>
+<tr><td>dns</td><td><span title='Anil Madhavapeddy, Christophe Troestler, David Sheets, Haris Rotsos, Heidi-ann, Luke Dunstan, Magnus Skjegstad, Richard Mortier, Runhang Li, Thomas Gazagnaire, Thomas Leonard, cr409, crotsos, root'>14</span></td><td class='duration'>≈ 43.3 months</td></tr>
+<tr><td>macaque</td><td><span title='Gabriel Scherer, Grégoire Henry, Jacques-Pascal Deplaix, Lyn Headley, Nick Retallack, Vincent Balat, bluestomr, bluestorm, ermine, gabriel.scherer, gasche, gasche.dylc, hhugo, paurkedal'>14</span></td><td class='duration'>≈ 73.2 months</td></tr>
+<tr><td>mirage-dns</td><td><span title='Anil Madhavapeddy, Christophe Troestler, David Sheets, Haris Rotsos, Heidi-ann, Luke Dunstan, Magnus Skjegstad, Richard Mortier, Runhang Li, Thomas Gazagnaire, Thomas Leonard, cr409, crotsos, root'>14</span></td><td class='duration'>≈ 43.3 months</td></tr>
+<tr><td>ocaml-zmq</td><td><span title='Anders Fugmann, Anders Peter Fugmann, Andrei Formiga, Andrew Ray, Dmitry Grebeniuk, Frej Soya, Hezekiah M. Carty, Joel Reymont, Jonas Jensen, Pedro Borges, Peter Zotov, Roma Sokolov, Roman Sokolov, Travis Brady'>14</span></td><td class='duration'>≈ 54.5 months</td></tr>
+<tr><td>ppx_deriving</td><td><span title='Christoph Höger, Jeremy Yallop, Maxence Guesdon, Nicholas Labich, Peter Zotov, Petter Urkedal, Rudi Grinberg, Scott Owens, Simon Cruanes, Thomas Braibant, Vincent Berthoux, Zoggy, runoshun, whitequark'>14</span></td><td class='duration'>≈ 13.7 months</td></tr>
+<tr><td>zmq</td><td><span title='Anders Fugmann, Anders Peter Fugmann, Andrei Formiga, Andrew Ray, Dmitry Grebeniuk, Frej Soya, Hezekiah M. Carty, Joel Reymont, Jonas Jensen, Pedro Borges, Peter Zotov, Roma Sokolov, Roman Sokolov, Travis Brady'>14</span></td><td class='duration'>≈ 54.5 months</td></tr>
+<tr><td>ojwidgets</td><td><span title='Arnaud Parant, ArnaudParant, Charly Chevalier, Christophe Lecointe, Drup, Enguerrand Decorne, Grégoire Henry, Hugo Heuzard, Jacques-Pascal Deplaix, Vincent Balat, christophelec, lisqlql, shakurra'>13</span></td><td class='duration'>≈ 14.6 months</td></tr>
+<tr><td>topology</td><td><span title='Andrew Ferguson, Arjun Guha, Chris Yu, Jedidiah McClurg, Jung Hyun Eun, Junghyun Eun, Marco Canini, Nate Foster, Robert Soule, Shrutarshi Basu, Spiros Eliopoulos, Steffen Juilf Smolka, junghyuneun'>13</span></td><td class='duration'>≈ 17.6 months</td></tr>
+<tr><td>tuareg</td><td><span title='Andreas Röhler, Christophe Troestler, Darren Hoo, David Sheets, Drup, Ian Tegebo, Joey Coleman, Roy Crihfield, Sam Steingold, Sean McLaughlin, Stefan Monnier, Till Varoquaux, jathd'>13</span></td><td class='duration'>≈ 86.2 months</td></tr>
+<tr><td>containers</td><td><span title='Bernardo da Costa, Carmelo Piccione, Drup, Emm, Guillaume Bury, Hezekiah M. Carty, Jacques-Pascal Deplaix, Nicolas Braud-Santoni, Simon Cruanes, Vincent Bernardoff, carm, cpiccion'>12</span></td><td class='duration'>≈ 30.6 months</td></tr>
+<tr><td>cow</td><td><span title='Anil Madhavapeddy, Antoine Luciani, Armael, Christophe Troestler, David Sheets, Gabor Pali, Richard Mortier, Rudi Grinberg, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, chrismamo1'>12</span></td><td class='duration'>≈ 37.9 months</td></tr>
+<tr><td>extlib</td><td><span title='Pietro Abate, adubey, bhurt, brunodanielch, mmottl, ncannasse, nurpax, rwmjones, skaller, trevarthan, ygrek, yoriyuki'>12</span></td><td class='duration'>≈ 152.4 months</td></tr>
+<tr><td>extlib-compat</td><td><span title='Pietro Abate, adubey, bhurt, brunodanielch, mmottl, ncannasse, nurpax, rwmjones, skaller, trevarthan, ygrek, yoriyuki'>12</span></td><td class='duration'>≈ 152.4 months</td></tr>
+<tr><td>mezzo</td><td><span title='Armaël Guéneau, Cyprien Mangin, François Pottier, Hugo Heuzard, Jonathan Protzenko, Neelesh Chandola, Pierre Chambart, Pierre-Evariste Dagand, Pierre-Évariste Dagand, Thibaut Balabonski, fpottier, protzenk'>12</span></td><td class='duration'>≈ 45.8 months</td></tr>
+<tr><td>parmap</td><td><span title='Cedric Cellier, Doug Hogan, Francois Berenger, Jerome Vouillon, Marco Danelutto, Paul Vernaza, Pietro Abate, Pippijn van Steenhoven, Roberto Di Cosmo, Samuel Hornus, Xavier Clerc, nilsbecker'>12</span></td><td class='duration'>≈ 45.8 months</td></tr>
+<tr><td>redis</td><td><span title='Alexander Dinu, David Höppner, Haoyang Wang, Josh Allmann, Martin Jambon, Matthew Tovbin, Mike Wells, Romain Beauxis, Rudi Grinberg, Ryland Degnan, aluuu, ipfix'>12</span></td><td class='duration'>≈ 46.8 months</td></tr>
+<tr><td>ssl</td><td><span title='Anil Madhavapeddy, Jérôme Vouillon, Mauricio Fernandez, Nicolas Trangez, Romain Beauxis, Samuel Mimram, Savonet Github, Thomas Calderon, Török Edwin, Vincent Bernardoff, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>12</span></td><td class='duration'>≈ 83.6 months</td></tr>
+<tr><td>xenctrl</td><td><span title='Andrew Cooper, Bob Ball, Dave Scott, David Scott, David Sheets, Euan Harris, John Else, Jon Ludlam, Mike McClurg, Rob Hoes, Si Beaumont, Vincent Bernardoff'>12</span></td><td class='duration'>≈ 28.9 months</td></tr>
+<tr><td>cstruct</td><td><span title='Anil Madhavapeddy, Christiano F. Haesbaert, David Scott, David Sheets, Pierre Chambart, Richard Mortier, Rudi Grinberg, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff, pqwy'>11</span></td><td class='duration'>≈ 38.6 months</td></tr>
+<tr><td>git</td><td><span title='Anil Madhavapeddy, Christophe Troestler, Drill Bear, GT, Louis Gesbert, Mindy Preston, Rudi Grinberg, Siraaj Khandkar, Thomas Gazagnaire, Vincent Bernardoff, codinuum'>11</span></td><td class='duration'>≈ 29.4 months</td></tr>
+<tr><td>mirage-git</td><td><span title='Anil Madhavapeddy, Christophe Troestler, Drill Bear, GT, Louis Gesbert, Mindy Preston, Rudi Grinberg, Siraaj Khandkar, Thomas Gazagnaire, Vincent Bernardoff, codinuum'>11</span></td><td class='duration'>≈ 29.4 months</td></tr>
+<tr><td>ocamltter</td><td><span title='Dominic Price, Eijiro Sumii, Jun FURUSE, Jun Furuse, YOSHIHIRO Imai, Yoshihiro Imai, furu, imai, mube, yoshihiro imai, yoshihiro503'>11</span></td><td class='duration'>≈ 65.1 months</td></tr>
+<tr><td>ppx_deriving_yojson</td><td><span title='Christoph Höger, Daniel Patterson, Etienne Millon, Hezekiah M. Carty, Maxence Guesdon, Peter Zotov, Sebastien Mondet, Simon Cruanes, Thomas Braibant, Zoggy, whitequark'>11</span></td><td class='duration'>≈ 12.0 months</td></tr>
+<tr><td>core</td><td><span title='Amir Chaudhry, Anil Madhavapeddy, Ben Millwood, Jeremie Dimino, Jérémie Dimino, Leo White, Rich Neswold, Simon Nicolussi, Thomas Refis, Yury Sulsky'>10</span></td><td class='duration'>≈ 30.7 months</td></tr>
+<tr><td>extunix</td><td><span title='Andre Nathan, Christiano F. Haesbaert, Dmitry Grebeniuk, François Bobot, Goswin von Brederlow, Pierre Chambart, Rudi Grinberg, Sylvain Le Gall, Zhenya, ygrek'>10</span></td><td class='duration'>≈ 59.7 months</td></tr>
+<tr><td>github</td><td><span title='Anil Madhavapeddy, David Sheets, Gabriel Scherer, Jeff Hammerbacher, Jon Ludlam, Markus Mottl, Michael Grünewald, Phil Hagelberg, Philipp Gesang, andrewray'>10</span></td><td class='duration'>≈ 40.3 months</td></tr>
+<tr><td>oasis-mirage</td><td><span title='Christophe Troestler, Jeremie Dimino, Martin Keegan, Mauricio Fernandez, Ronan Le Hy, Sylvain Le Gall, anil, chambart, sylvain.le-gall, till'>10</span></td><td class='duration'>≈ 53.5 months</td></tr>
+<tr><td>obuild</td><td><span title='Anil Madhavapeddy, Francois BERENGER, Francois Berenger, Gabor Pali, Jerome Maloberti, Matthieu Dubuget, Rudi Grinberg, Vincent Bernardoff, Vincent Hanquez, doligez'>10</span></td><td class='duration'>≈ 31.4 months</td></tr>
+<tr><td>packet</td><td><span title='Andrew Ferguson, Arjun Guha, Cole Schlesinger, Mark Reitblatt, Nate Foster, Shrutarshi Basu, Spiros Eliopoulos, Thien Duc Nguyen, ekotlikoff, koleini'>10</span></td><td class='duration'>≈ 19.2 months</td></tr>
+<tr><td>postgresql</td><td><span title='Alain Frisch, Dmitry Grebeniuk, Jean-Charles Campagne, Jonathan Derque, Markus Mottl, Petter Urkedal, Roven Gabriel, Stephane Legrand, Tomohiro Matsuyama, Yaron Minsky'>10</span></td><td class='duration'>≈ 111.9 months</td></tr>
+<tr><td>tls</td><td><span title='Anil Madhavapeddy, Ashish Agarwal, Dave Garrett, David Kaloper, Gabriel de Perthuis, Gregory Tsipenyuk, Hannes Mehnert, Heidi-ann, Thomas Leonard, pqwy'>10</span></td><td class='duration'>≈ 18.0 months</td></tr>
+<tr><td>uri</td><td><span title='Anil Madhavapeddy, Christophe Troestler, David Sheets, Jyotsna Prakash, Martin Jambon, Richard Mortier, Romain Calascibetta, Rudi Grinberg, Vincent Bernardoff, root'>10</span></td><td class='duration'>≈ 43.7 months</td></tr>
+<tr><td>yojson</td><td><span title='Ashish Agarwal, Daniel Weil, David Sheets, Edgar Aroutiounian, Hugo Heuzard, Jeff Meister, Martin Jambon, Vincent Bernardoff, mjambon, whitequark'>10</span></td><td class='duration'>≈ 61.9 months</td></tr>
+<tr><td>archimedes</td><td><span title='Bertrand Desmons, Christophe Troestler, Fabian Pijcke, Noémie Meunier, Pierre Hauweele, Pierre Hauweele, Fabian Pijcke, Xavier Deschuyteneer, chris, fabian pijcke'>9</span></td><td class='duration'>≈ 68.7 months</td></tr>
+<tr><td>atdgen</td><td><span title='Chris Yocum, Damien Doligez, Daniel Weil, David Sheets, Jeff Meister, Martin Jambon, Mathieu Baudet, Rudi Grinberg, pmundkur'>9</span></td><td class='duration'>≈ 53.6 months</td></tr>
+<tr><td>clangml</td><td><span title='Bor-Yuh Evan Chang, Devin Coughlin, Francois BERENGER, Francois Berenger, Huisong Li, Pippijn Van Steenhoven, Pippijn van Steenhoven, Shawn Meier, berenger'>9</span></td><td class='duration'>≈ 25.2 months</td></tr>
+<tr><td>devkit</td><td><span title='Dmitrii Polutov, Dmitry Grebeniuk, Raman Varabets, Roman Vorobets, Serge Zloto, Sergey Fedorov, Zhenya, ip, kluGe'>9</span></td><td class='duration'>≈ 71.4 months</td></tr>
+<tr><td>lablqt</td><td><span title='A. Pirogovski, Anastasia Gornostaeva, Anton Pirogovski, Dmitry Grebeniuk, Kakadu, Martin DeMello, Robert Overmann, kakadu, ygrek'>9</span></td><td class='duration'>≈ 39.0 months</td></tr>
+<tr><td>lambda-term</td><td><span title='Alexey Vyskubov, Daniel Bünzli, Drup, Jeremie Dimino, Jérémie Dimino, Martin DeMello, Maverick Woo, Peter Zotov, vklquevs'>9</span></td><td class='duration'>≈ 54.2 months</td></tr>
+<tr><td>alcotest</td><td><span title='Anil Madhavapeddy, David Sheets, Hannes Mehnert, Leo, Rudi Grinberg, Thomas Gazagnaire, Török Edwin, fdagnat'>8</span></td><td class='duration'>≈ 19.9 months</td></tr>
+<tr><td>bson</td><td><span title='ArnaudParant, Jack Chen, Marc Simon, MassD, MassD.me, Simon Marc, massd, xinuo'>8</span></td><td class='duration'>≈ 11.6 months</td></tr>
+<tr><td>mongo</td><td><span title='ArnaudParant, Enguerrand Decorne, Jack Chen, Jackson Tale, Marc Simon, MassD, MassD.me, Simon Marc'>8</span></td><td class='duration'>≈ 21.9 months</td></tr>
+<tr><td>ocp-index</td><td><span title='Anyakichi, Drup, Louis Gesbert, Nicolas Ojeda Bar, Peter Szilagyi, Pierre Chambart, Thomas Gazagnaire, thomasblanc'>8</span></td><td class='duration'>≈ 29.1 months</td></tr>
+<tr><td>ocurl</td><td><span title='Benjamin Graf, David Allsopp, Zhenya, arirux, bgraf, qchamaeleon, ygrek, yt'>8</span></td><td class='duration'>≈ 70.4 months</td></tr>
+<tr><td>rpc</td><td><span title='Dave Scott, David Scott, Jerome Maloberti, John Else, Jon Ludlam, Thomas Gazagnaire, doligez, samoht'>8</span></td><td class='duration'>≈ 67.0 months</td></tr>
+<tr><td>stog</td><td><span title='Gabriel Scherer, Leo Wzukw, Maxence Guesdon, Rudi Grinberg, Your Name, Zoggy, doligez, leowzukw'>8</span></td><td class='duration'>≈ 48.2 months</td></tr>
+<tr><td>tar-format</td><td><span title='Anil Madhavapeddy, David Allsopp, David Scott, David Sheets, Francois Berenger, Rob Dobson, Thomas Gazagnaire, Thomas Leonard'>8</span></td><td class='duration'>≈ 41.0 months</td></tr>
+<tr><td>tuntap</td><td><span title='Anil Madhavapeddy, Christiano F. Haesbaert, David Sheets, Gabor Pali, Justin Cormack, Luke Dunstan, Thomas Gazagnaire, Vincent Bernardoff'>8</span></td><td class='duration'>≈ 28.0 months</td></tr>
+<tr><td>vchan</td><td><span title='Anil Madhavapeddy, Dave Scott, David Scott, David Sheets, Jon Ludlam, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff'>8</span></td><td class='duration'>≈ 30.0 months</td></tr>
+<tr><td>websocket</td><td><span title='Andy Myers, Anil Madhavapeddy, Jeremy Yallop, Josh Allmann, Maxence Guesdon, Vincent Bernardoff, Zoggy, andrewray'>8</span></td><td class='duration'>≈ 33.4 months</td></tr>
+<tr><td>xenstore</td><td><span title='Anil Madhavapeddy, David Scott, Jerome Maloberti, Jon Ludlam, Jonathan Davies, Thomas Gazagnaire, Vincent Bernardoff, root'>8</span></td><td class='duration'>≈ 44.6 months</td></tr>
+<tr><td>baardskeerder</td><td><span title='Jan Doms, Jens Geiregat, Nicolas Trangez, Romain Slootmaekers, Tom De Coninck, romain, tdeconin'>7</span></td><td class='duration'>≈ 28.0 months</td></tr>
+<tr><td>bin_prot</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Markus Mottl, Spiros Eliopoulos, Thomas Refis, Yury Sulsky'>7</span></td><td class='duration'>≈ 30.4 months</td></tr>
+<tr><td>coinst</td><td><span title='Jakub Zwolakowski, Jerome Vouillon, Jerome.Vouillon, Mehdi Dogguy, Roberto Di Cosmo, jerome.vouillon, mehdi'>7</span></td><td class='duration'>≈ 51.7 months</td></tr>
+<tr><td>combine</td><td><span title='Jean-Christophe, Jean-Christophe Filliatre, Remy El Sibaie, Rémy Besognet El Sibaïe, remy, remy elsibaie, remyzorg'>7</span></td><td class='duration'>≈ 38.1 months</td></tr>
+<tr><td>core_kernel</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Simon Nicolussi, Thomas Refis, Yury Sulsky, leowzukw'>7</span></td><td class='duration'>≈ 26.2 months</td></tr>
+<tr><td>mirage-seal</td><td><span title='Anil Madhavapeddy, Drup, Hannes Mehnert, Matt Gray, Mindy Preston, Thomas Gazagnaire, lnmx'>7</span></td><td class='duration'>≈ 4.9 months</td></tr>
+<tr><td>quickcheck</td><td><span title='Alan Falloon, Anil Madhavapeddy, Bram Geron, Damien Doligez, Jan Doms, Nicolas Trangez, Roman Sokolov'>7</span></td><td class='duration'>≈ 82.4 months</td></tr>
+<tr><td>sexplib</td><td><span title='Ben Millwood, Hannes Mehnert, Jeremie Dimino, Leo White, Markus Mottl, Thomas Refis, Yury Sulsky'>7</span></td><td class='duration'>≈ 30.4 months</td></tr>
+<tr><td>sha</td><td><span title='David Scott, Eric Cooper, Florent Monnier, Forrest L Norvell, Thomas Gazagnaire, Vincent Bernardoff, Vincent Hanquez'>7</span></td><td class='duration'>≈ 96.0 months</td></tr>
+<tr><td>vhd-tool</td><td><span title='Anil Madhavapeddy, Dave Scott, David Scott, Euan Harris, Jon Ludlam, Si Beaumont, Thomas Sanders'>7</span></td><td class='duration'>≈ 23.3 months</td></tr>
+<tr><td>xen-api-client</td><td><span title='Anil Madhavapeddy, Dave Scott, David Scott, Jerome Maloberti, John Else, Jon Ludlam, Mike McClurg'>7</span></td><td class='duration'>≈ 35.3 months</td></tr>
+<tr><td>asn1-combinators</td><td><span title='Anil Madhavapeddy, Bojan Petrovic, Daniel Bünzli, David Sheets, Hannes Mehnert, pqwy'>6</span></td><td class='duration'>≈ 15.2 months</td></tr>
+<tr><td>cairo2</td><td><span title='Bertrand Desmons, Christophe Troestler, Drup, Edgar Friendly, Hezekiah M. Carty, Pierre Hauweele'>6</span></td><td class='duration'>≈ 75.2 months</td></tr>
+<tr><td>core_bench</td><td><span title='Anil Madhavapeddy, Ben Millwood, Ivan Gotovchits, Jeremie Dimino, Roshan James, Yury Sulsky'>6</span></td><td class='duration'>≈ 24.2 months</td></tr>
+<tr><td>core_extended</td><td><span title='Anil Madhavapeddy, Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis, Yury Sulsky'>6</span></td><td class='duration'>≈ 30.4 months</td></tr>
+<tr><td>csv</td><td><span title='Benoit Vaugon, Christophe Troestler, Jeff Hammerbacher, Leon Gunden, Mehdi Dogguy, Samuel Hym'>6</span></td><td class='duration'>≈ 73.0 months</td></tr>
+<tr><td>fat-filesystem</td><td><span title='Anil Madhavapeddy, David Scott, Richard Mortier, Stanislav Artemkin, Thomas Gazagnaire, Thomas Leonard'>6</span></td><td class='duration'>≈ 44.0 months</td></tr>
+<tr><td>gsl</td><td><span title='Akinori ABE, Andrey Bergman, Christophe Troestler, Markus Mottl, Sergei Lebedev, doligez'>6</span></td><td class='duration'>≈ 74.5 months</td></tr>
+<tr><td>iocaml-kernel</td><td><span title='Amir Chaudhry, Andrei Formiga, Anil Madhavapeddy, Jeremy Yallop, andrewray, gasche'>6</span></td><td class='duration'>≈ 6.9 months</td></tr>
+<tr><td>jenga</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Nick Chapman, Thomas Refis, Yury Sulsky'>6</span></td><td class='duration'>≈ 28.7 months</td></tr>
+<tr><td>lame</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, dbaelde@aec24677-d710-0410-a355-ac75e2bdf181, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>6</span></td><td class='duration'>≈ 83.5 months</td></tr>
+<tr><td>mad</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, dbaelde@aec24677-d710-0410-a355-ac75e2bdf181, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>6</span></td><td class='duration'>≈ 83.6 months</td></tr>
+<tr><td>mirage-block-unix</td><td><span title='Anil Madhavapeddy, Dave Scott, David Scott, Martin Lucina, Thomas Gazagnaire, Thomas Leonard'>6</span></td><td class='duration'>≈ 19.3 months</td></tr>
+<tr><td>mirage-entropy-unix</td><td><span title='Anil Madhavapeddy, David Scott, Hannes Mehnert, Thomas Gazagnaire, Thomas Leonard, pqwy'>6</span></td><td class='duration'>≈ 10.6 months</td></tr>
+<tr><td>mirage-entropy-xen</td><td><span title='Anil Madhavapeddy, David Scott, Hannes Mehnert, Thomas Gazagnaire, Thomas Leonard, pqwy'>6</span></td><td class='duration'>≈ 10.6 months</td></tr>
+<tr><td>mirage-fs-unix</td><td><span title='Anil Madhavapeddy, David Sheets, Hannes Mehnert, Mindy Preston, Thomas Gazagnaire, Thomas Leonard'>6</span></td><td class='duration'>≈ 19.4 months</td></tr>
+<tr><td>mirage-net-unix</td><td><span title='Anil Madhavapeddy, Hannes Mehnert, Luke Dunstan, Robert Ream, Thomas Gazagnaire, Thomas Leonard'>6</span></td><td class='duration'>≈ 18.2 months</td></tr>
+<tr><td>mirari</td><td><span title='Anil Madhavapeddy, David Scott, Gabor Pali, Mike McClurg, Thomas Gazagnaire, Vincent Bernardoff'>6</span></td><td class='duration'>≈ 10.3 months</td></tr>
+<tr><td>mm</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, dbaelde@aec24677-d710-0410-a355-ac75e2bdf181, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>6</span></td><td class='duration'>≈ 61.1 months</td></tr>
+<tr><td>ojquery</td><td><span title='Christophe Lecointe, Drup, Grégoire Henry, christophelec, hhugo, shakurra'>6</span></td><td class='duration'>≈ 13.7 months</td></tr>
+<tr><td>omd</td><td><span title='Anil Madhavapeddy, Christophe Troestler, Drup, Jeremy Yallop, Philippe Wang, Thomas Gazagnaire'>6</span></td><td class='duration'>≈ 27.1 months</td></tr>
+<tr><td>ox</td><td><span title='Arjun Guha, Jedidiah McClurg, Mark Reitblatt, Nate Foster, Robert Soule, Spiros Eliopoulos'>6</span></td><td class='duration'>≈ 19.3 months</td></tr>
+<tr><td>piqilib</td><td><span title='Anton Lavrik, Hunter Morris, Ignas Vyšniauskas, Koen De Keyser, Motiejus Jakštys, Thijs Terlouw'>6</span></td><td class='duration'>≈ 60.6 months</td></tr>
+<tr><td>re2</td><td><span title='Anil Madhavapeddy, Ben Millwood, Jeremie Dimino, Leo White, Stanislav Artemkin, Yury Sulsky'>6</span></td><td class='duration'>≈ 26.7 months</td></tr>
+<tr><td>reactiveData</td><td><span title='Drup, Gabriel Radanne, Hugo Heuzard, Vincent Balat, hhugo, pveber'>6</span></td><td class='duration'>≈ 11.3 months</td></tr>
+<tr><td>shared-memory-ring</td><td><span title='Anil Madhavapeddy, Dave Scott, David Scott, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff'>6</span></td><td class='duration'>≈ 32.5 months</td></tr>
+<tr><td>sodium</td><td><span title='Anil Madhavapeddy, David Sheets, Peter Zotov, Pierre Chambart, Vincent Bernardoff, cfcs'>6</span></td><td class='duration'>≈ 24.6 months</td></tr>
+<tr><td>sundialsml</td><td><span title='Antoine Madet, Benoit Caillaud, Gabriel Scherer, Jun Inoue, Marc Pouzet, Timothy Bourke'>6</span></td><td class='duration'>≈ 54.2 months</td></tr>
+<tr><td>taglib</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, dbaelde@aec24677-d710-0410-a355-ac75e2bdf181, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>6</span></td><td class='duration'>≈ 83.6 months</td></tr>
+<tr><td>theora</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, dbaelde@aec24677-d710-0410-a355-ac75e2bdf181, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>6</span></td><td class='duration'>≈ 83.6 months</td></tr>
+<tr><td>toml</td><td><span title='Ashish Agarwal, Emm, Julien Sagot, Simon Cruanes, The Gitter Badger, Thomas Wickham'>6</span></td><td class='duration'>≈ 24.7 months</td></tr>
+<tr><td>vhd-format</td><td><span title='Dave Scott, David Scott, Jon Ludlam, Si Beaumont, Thomas Leonard, Zheng Li'>6</span></td><td class='duration'>≈ 32.3 months</td></tr>
+<tr><td>xapi-inventory</td><td><span title='Akshay, David Scott, Euan Harris, John Else, Jon Ludlam, Thomas Sanders'>6</span></td><td class='duration'>≈ 28.6 months</td></tr>
+<tr><td>xapi-xenops-cli</td><td><span title='Dave Scott, David Scott, John Else, Jon Ludlam, Rob Hoes, chengz'>6</span></td><td class='duration'>≈ 31.4 months</td></tr>
+<tr><td>alpaca</td><td><span title='David Sheets, Mark Li, Runhang Li, marklrh, maЯklЯh'>5</span></td><td class='duration'>≈ 4.9 months</td></tr>
+<tr><td>async</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis, Yury Sulsky'>5</span></td><td class='duration'>≈ 30.7 months</td></tr>
+<tr><td>async_core</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis, Yury Sulsky'>5</span></td><td class='duration'>≈ 30.4 months</td></tr>
+<tr><td>async_extra</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis, Yury Sulsky'>5</span></td><td class='duration'>≈ 30.4 months</td></tr>
+<tr><td>async_kernel</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis, Yury Sulsky'>5</span></td><td class='duration'>≈ 30.4 months</td></tr>
+<tr><td>async_smtp</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis, Yury Sulsky'>5</span></td><td class='duration'>≈ 23.8 months</td></tr>
+<tr><td>async_unix</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis, Yury Sulsky'>5</span></td><td class='duration'>≈ 30.4 months</td></tr>
+<tr><td>atd</td><td><span title='Daniel Weil, Jeff Meister, Martin Jambon, Mathieu Baudet, Vincent Bernardoff'>5</span></td><td class='duration'>≈ 47.5 months</td></tr>
+<tr><td>aws</td><td><span title='Hugo Heuzard, Simon Marc, William Le Ferrand, barko, wleferrand'>5</span></td><td class='duration'>≈ 58.6 months</td></tr>
+<tr><td>batsh</td><td><span title='Al Ramirez, BYVoid, Carbo Kuo, Marius Ungureanu, Nixola'>5</span></td><td class='duration'>≈ 17.6 months</td></tr>
+<tr><td>bisect_ppx</td><td><span title='Grégoire Henry, Leonid Rozenberg, Mindy Preston, Si Beaumont, bisect'>5</span></td><td class='duration'>≈ 87.1 months</td></tr>
+<tr><td>crunch</td><td><span title='Anil Madhavapeddy, David Scott, Thomas Gazagnaire, Thomas Leonard, Vincent Bernardoff'>5</span></td><td class='duration'>≈ 33.0 months</td></tr>
+<tr><td>cry</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, dbaelde@aec24677-d710-0410-a355-ac75e2bdf181, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181'>5</span></td><td class='duration'>≈ 77.9 months</td></tr>
+<tr><td>depext</td><td><span title='Anil Madhavapeddy, David Sheets, Francois BERENGER, Juergen Hoetzel, Louis Gesbert'>5</span></td><td class='duration'>≈ 7.6 months</td></tr>
+<tr><td>dtools</td><td><span title='Romain Beauxis, Samuel Mimram, dbaelde@aec24677-d710-0410-a355-ac75e2bdf181, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>5</span></td><td class='duration'>≈ 83.5 months</td></tr>
+<tr><td>dyntype</td><td><span title='Anil Madhavapeddy, Gabor Pali, Paolo Donadeo, Thomas Gazagnaire, samoht'>5</span></td><td class='duration'>≈ 57.3 months</td></tr>
+<tr><td>ezjsonm</td><td><span title='Arnout Engelen, Jeremy Yallop, Julien Sagot, Rudi Grinberg, Thomas Gazagnaire'>5</span></td><td class='duration'>≈ 20.7 months</td></tr>
+<tr><td>gstreamer</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>5</span></td><td class='duration'>≈ 83.6 months</td></tr>
+<tr><td>imaplet-lwt</td><td><span title='GT, Gregory Tsipenyuk, Thomas Gazagnaire, gregt, gregtatcam'>5</span></td><td class='duration'>≈ 11.5 months</td></tr>
+<tr><td>inspect</td><td><span title='Jeremy Yallop, Kaspar M. Rohrer, Maxence Guesdon, Wei Hu, Zoggy'>5</span></td><td class='duration'>≈ 48.6 months</td></tr>
+<tr><td>io-page</td><td><span title='Anil Madhavapeddy, David Scott, Hannes Mehnert, Thomas Gazagnaire, Thomas Leonard'>5</span></td><td class='duration'>≈ 20.7 months</td></tr>
+<tr><td>io-page-unix</td><td><span title='Anil Madhavapeddy, David Scott, Hannes Mehnert, Thomas Gazagnaire, Thomas Leonard'>5</span></td><td class='duration'>≈ 20.7 months</td></tr>
+<tr><td>io-page-xen</td><td><span title='Anil Madhavapeddy, David Scott, Hannes Mehnert, Thomas Gazagnaire, Thomas Leonard'>5</span></td><td class='duration'>≈ 20.7 months</td></tr>
+<tr><td>iocaml</td><td><span title='Andrew Ray, Andy Ray, Anil Madhavapeddy, Jeremy Yallop, andrewray'>5</span></td><td class='duration'>≈ 12.1 months</td></tr>
+<tr><td>ipaddr</td><td><span title='Anil Madhavapeddy, David Sheets, Hugo Heuzard, Nicolas Ojeda Bar, Vincent Bernardoff'>5</span></td><td class='duration'>≈ 19.2 months</td></tr>
+<tr><td>irc-client</td><td><span title='Berke Durak, John Else, Peter Zotov, Simon Cruanes, diethylamine'>5</span></td><td class='duration'>≈ 27.2 months</td></tr>
+<tr><td>jingoo</td><td><span title='Cedric Cellier, Pradeep Gowda, Sylvain Le Gall, Tomohiro Matsuyama, tategakibunko'>5</span></td><td class='duration'>≈ 40.2 months</td></tr>
+<tr><td>lacaml</td><td><span title='Akinori ABE, Chris Hardin, Christophe Troestler, FlorentHoareau, Markus Mottl'>5</span></td><td class='duration'>≈ 111.9 months</td></tr>
+<tr><td>ladspa</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>5</span></td><td class='duration'>≈ 83.6 months</td></tr>
+<tr><td>lens</td><td><span title='Anil Madhavapeddy, Didier Wenzek, Leo Wzukw, Paolo Donadeo, Tim McGilchrist'>5</span></td><td class='duration'>≈ 22.6 months</td></tr>
+<tr><td>leveldb</td><td><span title='Benoit Vaugon, Mauricio Fernandez, William Le Ferrand, julian1, mfp'>5</span></td><td class='duration'>≈ 45.1 months</td></tr>
+<tr><td>lwt-zmq</td><td><span title='Grinberg, Hezekiah M. Carty, Peter Zotov, Rudi Grinberg, andrewray'>5</span></td><td class='duration'>≈ 25.7 months</td></tr>
+<tr><td>mindstorm</td><td><span title='Anshuman Mohan, Christophe Troestler, Dany Maslowski, Julie De Pril, Marc Ducobu'>5</span></td><td class='duration'>≈ 93.9 months</td></tr>
+<tr><td>mirage-console</td><td><span title='Anil Madhavapeddy, David Scott, Jon Ludlam, Thomas Gazagnaire, Thomas Leonard'>5</span></td><td class='duration'>≈ 16.2 months</td></tr>
+<tr><td>mirage-console-unix</td><td><span title='Anil Madhavapeddy, David Scott, Jon Ludlam, Thomas Gazagnaire, Thomas Leonard'>5</span></td><td class='duration'>≈ 16.2 months</td></tr>
+<tr><td>mirage-console-xen</td><td><span title='Anil Madhavapeddy, David Scott, Jon Ludlam, Thomas Gazagnaire, Thomas Leonard'>5</span></td><td class='duration'>≈ 16.2 months</td></tr>
+<tr><td>msgpack</td><td><span title='Anders Fugmann, Leo, MIZUNO Hiroki, kokuyouwind, mzp'>5</span></td><td class='duration'>≈ 37.3 months</td></tr>
+<tr><td>nbd</td><td><span title='Anil Madhavapeddy, David Scott, Euan Harris, Jon Ludlam, thomassa'>5</span></td><td class='duration'>≈ 30.0 months</td></tr>
+<tr><td>nocrypto</td><td><span title='Christophe Troestler, Hannes Mehnert, Paarth, Thomas Leonard, pqwy'>5</span></td><td class='duration'>≈ 16.7 months</td></tr>
+<tr><td>obus</td><td><span title='Daniel Bünzli, Jeremie Dimino, Jérémie Dimino, chambart, jeremie'>5</span></td><td class='duration'>≈ 81.6 months</td></tr>
+<tr><td>ocaml_plugin</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis, Yury Sulsky'>5</span></td><td class='duration'>≈ 29.6 months</td></tr>
+<tr><td>ocplib-endian</td><td><span title='Fabrice Le Fessant, Peter Zotov, Pierre Chambart, Reynir Björnsson, chambart'>5</span></td><td class='duration'>≈ 29.9 months</td></tr>
+<tr><td>ogg</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>5</span></td><td class='duration'>≈ 83.5 months</td></tr>
+<tr><td>operf-micro</td><td><span title='Fabrice Le Fessant, Pierre Chambart, Simon Cruanes, Vincent Bernardoff, michael'>5</span></td><td class='duration'>≈ 11.7 months</td></tr>
+<tr><td>pa_ounit</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis, Yury Sulsky'>5</span></td><td class='duration'>≈ 30.4 months</td></tr>
+<tr><td>pgocaml</td><td><span title='Jacques-Pascal Deplaix, Mauricio Fernandez, darioteixeira, jaapb, rwmjones'>5</span></td><td class='duration'>≈ 89.3 months</td></tr>
+<tr><td>ppx_tools</td><td><span title='Alain Frisch, Jeremie Dimino, Peter Zotov, Stephane Glondu, alainfrisch'>5</span></td><td class='duration'>≈ 22.3 months</td></tr>
+<tr><td>sosa</td><td><span title='Isaac Hodes, Jeff Hammerbacher, Leonid Rozenberg, Louis Roche, Sebastien Mondet'>5</span></td><td class='duration'>≈ 23.6 months</td></tr>
+<tr><td>soundtouch</td><td><span title='Romain Beauxis, Samuel Mimram, dbaelde@aec24677-d710-0410-a355-ac75e2bdf181, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>5</span></td><td class='duration'>≈ 83.5 months</td></tr>
+<tr><td>spdiff</td><td><span title='Jesper Andersen, Sebastian Andrzej Siewior, The Gitter Badger, doligez, jespera'>5</span></td><td class='duration'>≈ 90.8 months</td></tr>
+<tr><td>speex</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>5</span></td><td class='duration'>≈ 83.7 months</td></tr>
+<tr><td>sqlgg</td><td><span title='Dmitry Grebeniuk, Petter Urkedal, Roman Vorobets, me, ygrek'>5</span></td><td class='duration'>≈ 77.4 months</td></tr>
+<tr><td>syndic</td><td><span title='Calascibetta Romain, Christophe Troestler, Drup, Eyyub, Romain Calascibetta'>5</span></td><td class='duration'>≈ 15.8 months</td></tr>
+<tr><td>tsdl</td><td><span title='Blue Prawn, Daniel Bünzli, Frederic Bour, Jeremy Yallop, Julian Squires'>5</span></td><td class='duration'>≈ 15.2 months</td></tr>
+<tr><td>vorbis</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>5</span></td><td class='duration'>≈ 83.6 months</td></tr>
+<tr><td>x509</td><td><span title='David Kaloper, Hannes Mehnert, Reynir Björnsson, Stefan Grundmann, pqwy'>5</span></td><td class='duration'>≈ 17.5 months</td></tr>
+<tr><td>xen-disk</td><td><span title='Anil Madhavapeddy, Dave Scott, David Scott, Jon Ludlam, Thomas Leonard'>5</span></td><td class='duration'>≈ 34.3 months</td></tr>
+<tr><td>xenstore_transport</td><td><span title='Dave Scott, David Scott, John Else, Jon Ludlam, Vincent Bernardoff'>5</span></td><td class='duration'>≈ 31.5 months</td></tr>
+<tr><td>xtmpl</td><td><span title='Andrei Formiga, Gabriel Scherer, Victor Nicollet, Your Name, Zoggy'>5</span></td><td class='duration'>≈ 39.8 months</td></tr>
+<tr><td>zed</td><td><span title='Frederic Bour, Hugo Heuzard, Jeremie Dimino, Jérémie Dimino, ampsaltis'>5</span></td><td class='duration'>≈ 47.0 months</td></tr>
+<tr><td>alsa</td><td><span title='Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 83.5 months</td></tr>
+<tr><td>ao</td><td><span title='Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 83.6 months</td></tr>
+<tr><td>async_extended</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis'>4</span></td><td class='duration'>≈ 14.0 months</td></tr>
+<tr><td>async_parallel</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Yury Sulsky'>4</span></td><td class='duration'>≈ 26.9 months</td></tr>
+<tr><td>async_ssl</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis'>4</span></td><td class='duration'>≈ 16.7 months</td></tr>
+<tr><td>benchmark</td><td><span title='Christophe Troestler, Drup, Simon Cruanes, doligez'>4</span></td><td class='duration'>≈ 54.3 months</td></tr>
+<tr><td>bignum</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis'>4</span></td><td class='duration'>≈ 16.1 months</td></tr>
+<tr><td>bitstring</td><td><span title='(no author), Bernhard Schommer, Richard W.M. Jones, toots@rastageeks.org'>4</span></td><td class='duration'>≈ 77.1 months</td></tr>
+<tr><td>bjack</td><td><span title='Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 83.5 months</td></tr>
+<tr><td>camltc</td><td><span title='Jan Doms, Nicolas Trangez, Romain Slootmaekers, romain'>4</span></td><td class='duration'>≈ 19.4 months</td></tr>
+<tr><td>channel</td><td><span title='Anil Madhavapeddy, Mindy Preston, Thomas Gazagnaire, Thomas Leonard'>4</span></td><td class='duration'>≈ 17.7 months</td></tr>
+<tr><td>cmdliner</td><td><span title='Daniel Bünzli, Hugo Heuzard, Louis Gesbert, Raphaël Proust'>4</span></td><td class='duration'>≈ 45.4 months</td></tr>
+<tr><td>core_profiler</td><td><span title='Ben Millwood, Jeremie Dimino, Jérémie Dimino, Leo White'>4</span></td><td class='duration'>≈ 6.6 months</td></tr>
+<tr><td>cowabloga</td><td><span title='Anil Madhavapeddy, David Sheets, Richard Mortier, pqwy'>4</span></td><td class='duration'>≈ 17.2 months</td></tr>
+<tr><td>dolog</td><td><span title='Francois BERENGER, Francois Berenger, Simon Cruanes, Thomas Gazagnaire'>4</span></td><td class='duration'>≈ 20.9 months</td></tr>
+<tr><td>duppy</td><td><span title='Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 82.8 months</td></tr>
+<tr><td>email_message</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Yury Sulsky'>4</span></td><td class='duration'>≈ 23.8 months</td></tr>
+<tr><td>faad</td><td><span title='Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 83.5 months</td></tr>
+<tr><td>fieldslib</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Yury Sulsky'>4</span></td><td class='duration'>≈ 30.4 months</td></tr>
+<tr><td>flac</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 64.1 months</td></tr>
+<tr><td>gavl</td><td><span title='Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 83.5 months</td></tr>
+<tr><td>hdf</td><td><span title='Christophe Troestler, H. Carty, Hezekiah M. Carty, hez'>4</span></td><td class='duration'>≈ 85.6 months</td></tr>
+<tr><td>imap</td><td><span title='Bojan Petrovic, Nicolas Ojeda Bar, Philipp Gesang, Rudi Grinberg'>4</span></td><td class='duration'>≈ 16.5 months</td></tr>
+<tr><td>jitsu</td><td><span title='Anil Madhavapeddy, Magnus Skjegstad, Thomas Gazagnaire, koleini'>4</span></td><td class='duration'>≈ 11.6 months</td></tr>
+<tr><td>lastfm</td><td><span title='Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 83.6 months</td></tr>
+<tr><td>lo</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 57.1 months</td></tr>
+<tr><td>lwt-parallel</td><td><span title='Ivan, Ivan Gotovchits, Tim McGilchrist, crox'>4</span></td><td class='duration'>≈ 22.0 months</td></tr>
+<tr><td>lz4</td><td><span title='Peter Zotov, arirux, fdopen, whitequark'>4</span></td><td class='duration'>≈ 15.2 months</td></tr>
+<tr><td>mbr-format</td><td><span title='Dave Scott, David Scott, Thomas Gazagnaire, Thomas Leonard'>4</span></td><td class='duration'>≈ 19.3 months</td></tr>
+<tr><td>mesh</td><td><span title=', Christophe TROESTLER, Christophe Troestler, chris_77'>4</span></td><td class='duration'>≈ 109.8 months</td></tr>
+<tr><td>mirage-block-xen</td><td><span title='Anil Madhavapeddy, Dave Scott, David Scott, Thomas Leonard'>4</span></td><td class='duration'>≈ 26.3 months</td></tr>
+<tr><td>mirage-net-xen</td><td><span title='Anil Madhavapeddy, David Scott, Thomas Leonard, Török Edwin'>4</span></td><td class='duration'>≈ 15.3 months</td></tr>
+<tr><td>oasis2opam</td><td><span title='Christophe Troestler, Hezekiah M. Carty, Markus Mottl, Török Edwin'>4</span></td><td class='duration'>≈ 29.0 months</td></tr>
+<tr><td>ocamleditor</td><td><span title='Francesco Tovagliari, Louis Gesbert, OPENSuse-12.1, ftovagliari'>4</span></td><td class='duration'>≈ 46.0 months</td></tr>
+<tr><td>oml</td><td><span title='Jeff Hammerbacher, Leonid Rozenberg, carm, cpiccion'>4</span></td><td class='duration'>≈ 5.8 months</td></tr>
+<tr><td>omonad</td><td><span title='Jeremy Yallop, Nguyễn Lê Thành Dũng, Wojciech Meyer, yallop'>4</span></td><td class='duration'>≈ 20.6 months</td></tr>
+<tr><td>opam-publish</td><td><span title='Anil Madhavapeddy, David Sheets, Louis Gesbert, carm'>4</span></td><td class='duration'>≈ 10.8 months</td></tr>
+<tr><td>opam-sync-github-prs</td><td><span title='Anil Madhavapeddy, David Sheets, Jeremy Yallop, Nik Sultana'>4</span></td><td class='duration'>≈ 18.1 months</td></tr>
+<tr><td>operf-macro</td><td><span title='Pierre Chambart, Vincent Bernardoff, gasche, michael'>4</span></td><td class='duration'>≈ 8.2 months</td></tr>
+<tr><td>owebl</td><td><span title='Phil, Phil Eaton, Philip Eaton, Rizo Isrof'>4</span></td><td class='duration'>≈ 12.1 months</td></tr>
+<tr><td>pcap-format</td><td><span title='Anil Madhavapeddy, Dave Scott, David Scott, Richard Mortier'>4</span></td><td class='duration'>≈ 30.5 months</td></tr>
+<tr><td>portaudio</td><td><span title='Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 83.6 months</td></tr>
+<tr><td>ppx_const</td><td><span title='Peter Zotov, Reynir Björnsson, mcc, whitequark'>4</span></td><td class='duration'>≈ 13.9 months</td></tr>
+<tr><td>prob-cache</td><td><span title='Carmelo Piccione, carm, cpiccion, struktured'>4</span></td><td class='duration'>≈ 8.8 months</td></tr>
+<tr><td>publish</td><td><span title='Anil Madhavapeddy, David Sheets, Louis Gesbert, carm'>4</span></td><td class='duration'>≈ 10.8 months</td></tr>
+<tr><td>pulseaudio</td><td><span title='Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 83.6 months</td></tr>
+<tr><td>rdf</td><td><span title='ArnaudParant, Florian Hatat, Maxence Guesdon, zoggy'>4</span></td><td class='duration'>≈ 45.2 months</td></tr>
+<tr><td>rpc_parallel</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis'>4</span></td><td class='duration'>≈ 10.3 months</td></tr>
+<tr><td>samplerate</td><td><span title='Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 83.5 months</td></tr>
+<tr><td>schroedinger</td><td><span title='David Baelde, Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 78.8 months</td></tr>
+<tr><td>sqlexpr</td><td><span title='Anil Madhavapeddy, Armael, Mauricio Fernandez, Simon Cruanes'>4</span></td><td class='duration'>≈ 61.3 months</td></tr>
+<tr><td>sqlite3</td><td><span title='Joseph Young, Leonid Rozenberg, Markus Mottl, ygrek'>4</span></td><td class='duration'>≈ 105.4 months</td></tr>
+<tr><td>swdogen</td><td><span title='C.Y. yuen, Yasha Bubnov, xOneca, ytsTony'>4</span></td><td class='duration'>≈ 11.2 months</td></tr>
+<tr><td>tophide</td><td><span title='Martin Jambon, andrewray, arirux, mjambon'>4</span></td><td class='duration'>≈ 80.2 months</td></tr>
+<tr><td>type_conv</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Yury Sulsky'>4</span></td><td class='duration'>≈ 30.4 months</td></tr>
+<tr><td>typerep</td><td><span title='Ben Millwood, Jeremie Dimino, Leo White, Thomas Refis'>4</span></td><td class='duration'>≈ 26.6 months</td></tr>
+<tr><td>ucorelib</td><td><span title='Jun FURUSE, Yoriyuki Yamagata, ygrek, yoriyuki'>4</span></td><td class='duration'>≈ 38.2 months</td></tr>
+<tr><td>vrt</td><td><span title='Eric B Merritt, Eric Merritt, Samuel Rivas, quiquepaz'>4</span></td><td class='duration'>≈ 9.2 months</td></tr>
+<tr><td>weberizer</td><td><span title='Ashish Agarwal, Bertrand Desmons, Christophe Troestler, Pierre Hauweele'>4</span></td><td class='duration'>≈ 54.6 months</td></tr>
+<tr><td>xapi-netdev</td><td><span title='Bob Ball, David Scott, Jon Ludlam, Ranjeet Ramalingam'>4</span></td><td class='duration'>≈ 32.3 months</td></tr>
+<tr><td>xapi-rrd</td><td><span title='David Scott, John Else, Jon Ludlam, Thomas Gazagnaire'>4</span></td><td class='duration'>≈ 27.5 months</td></tr>
+<tr><td>xapi-stdext</td><td><span title='David Scott, John Else, Jon Ludlam, Thomas Sanders'>4</span></td><td class='duration'>≈ 32.2 months</td></tr>
+<tr><td>xapi-tapctl</td><td><span title='Dave Scott, David Scott, John Else, Jon Ludlam'>4</span></td><td class='duration'>≈ 27.1 months</td></tr>
+<tr><td>xen-block-driver</td><td><span title='Anil Madhavapeddy, Dave Scott, David Scott, Thomas Leonard'>4</span></td><td class='duration'>≈ 26.3 months</td></tr>
+<tr><td>xen-gnt</td><td><span title='Anil Madhavapeddy, David Scott, John Else, Thomas Leonard'>4</span></td><td class='duration'>≈ 13.6 months</td></tr>
+<tr><td>xml-light</td><td><span title='Bruno Guillaume, Caue Waneck, Hugo Heuzard, Nicolas Cannasse'>4</span></td><td class='duration'>≈ 129.2 months</td></tr>
+<tr><td>xmlplaylist</td><td><span title='Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>4</span></td><td class='duration'>≈ 83.5 months</td></tr>
+<tr><td>aacplus</td><td><span title='Romain Beauxis, Samuel Mimram, metamorph68@aec24677-d710-0410-a355-ac75e2bdf181'>3</span></td><td class='duration'>≈ 71.4 months</td></tr>
+<tr><td>assertions</td><td><span title='Ben, Benjamin Greenman, ben'>3</span></td><td class='duration'>≈ 18.2 months</td></tr>
+<tr><td>atd2cconv</td><td><span title='Isaac Hodes, Leonid Rozenberg, Sebastien Mondet'>3</span></td><td class='duration'>≈ 5.3 months</td></tr>
+<tr><td>base64</td><td><span title='Anil Madhavapeddy, Peter Zotov, Tim McGilchrist'>3</span></td><td class='duration'>≈ 4.8 months</td></tr>
+<tr><td>c3</td><td><span title='Dave Scott, David Scott, Yaron Minsky'>3</span></td><td class='duration'>≈ 0.6 months</td></tr>
+<tr><td>caml2html</td><td><span title='David Allsopp, Martin Jambon, mjambon'>3</span></td><td class='duration'>≈ 81.9 months</td></tr>
+<tr><td>camlp5</td><td><span title='Daniel de Rauglaudre, Daniel de-Rauglaudre, deraugla'>3</span></td><td class='duration'>≈ 107.5 months</td></tr>
+<tr><td>cdrom</td><td><span title='Dave Scott, David Scott, Jon Ludlam'>3</span></td><td class='duration'>≈ 4.6 months</td></tr>
+<tr><td>cpdf</td><td><span title='Anil Madhavapeddy, John Whitington, johnwhitington'>3</span></td><td class='duration'>≈ 23.8 months</td></tr>
+<tr><td>dssi</td><td><span title='Romain Beauxis, Samuel Mimram, smimram@aec24677-d710-0410-a355-ac75e2bdf181'>3</span></td><td class='duration'>≈ 68.6 months</td></tr>
+<tr><td>efl</td><td><span title='Alexis Bernadet, Vivien Maisonneuve, axiles'>3</span></td><td class='duration'>≈ 26.9 months</td></tr>
+<tr><td>facebook-sdk</td><td><span title='Anil Madhavapeddy, Christophe Troestler, Dominic Price'>3</span></td><td class='duration'>≈ 16.3 months</td></tr>
+<tr><td>fd-send-recv</td><td><span title='Dave Scott, David Scott, Vincent Bernardoff'>3</span></td><td class='duration'>≈ 3.9 months</td></tr>
+<tr><td>fftw3</td><td><span title='Christophe Troestler, Damien Doligez, Francois Berenger'>3</span></td><td class='duration'>≈ 89.1 months</td></tr>
+<tr><td>frag</td><td><span title='Philippe Wang, Philippe_Wang, pw374'>3</span></td><td class='duration'>≈ 5.9 months</td></tr>
+<tr><td>gammu</td><td><span title='Christophe Troestler, Noémie Meunier, Pierre Hauweele'>3</span></td><td class='duration'>≈ 58.2 months</td></tr>
+<tr><td>gen</td><td><span title='Simon Cruanes, carm, cpiccion'>3</span></td><td class='duration'>≈ 15.6 months</td></tr>
+<tr><td>higher</td><td><span title='Jeremy Yallop, Leo White, yallop'>3</span></td><td class='duration'>≈ 17.4 months</td></tr>
+<tr><td>higlo</td><td><span title='Maxence Guesdon, Zoggy, zoggy'>3</span></td><td class='duration'>≈ 17.8 months</td></tr>
+<tr><td>incremental</td><td><span title='Leo White, Thomas Refis, hhugo'>3</span></td><td class='duration'>≈ 1.4 months</td></tr>
+<tr><td>inotify</td><td><span title='Drup, Peter Zotov, Sean McLaughlin'>3</span></td><td class='duration'>≈ 5.3 months</td></tr>
+<tr><td>iocamljs-kernel</td><td><span title='Andrew Ray, Anil Madhavapeddy, andrewray'>3</span></td><td class='duration'>≈ 6.5 months</td></tr>
+<tr><td>lambdoc</td><td><span title='Drup, Török Edwin, darioteixeira'>3</span></td><td class='duration'>≈ 84.4 months</td></tr>
+<tr><td>mirage-http</td><td><span title='Anil Madhavapeddy, Rudi Grinberg, Thomas Gazagnaire'>3</span></td><td class='duration'>≈ 18.8 months</td></tr>
+<tr><td>mirage-http-unix</td><td><span title='Anil Madhavapeddy, Rudi Grinberg, Thomas Gazagnaire'>3</span></td><td class='duration'>≈ 18.8 months</td></tr>
+<tr><td>mirage-net-macosx</td><td><span title='Anil Madhavapeddy, Nicolas Ojeda Bar, Thomas Gazagnaire'>3</span></td><td class='duration'>≈ 3.1 months</td></tr>
+<tr><td>mlbdd</td><td><span title='Arlen Cox, Pierre Chambart, arlencox'>3</span></td><td class='duration'>≈ 8.0 months</td></tr>
+<tr><td>mustache</td><td><span title='Martin Keegan, Rudi Grinberg, Toby Moore'>3</span></td><td class='duration'>≈ 13.5 months</td></tr>
+<tr><td>netlink</td><td><span title='David Scott, Jon Ludlam, Rob Hoes'>3</span></td><td class='duration'>≈ 21.9 months</td></tr>
+<tr><td>obigstore</td><td><span title='Damien Doligez, Mauricio Fernandez, Vincent Bernardoff'>3</span></td><td class='duration'>≈ 49.8 months</td></tr>
+<tr><td>ocaml-buddy</td><td><span title='Pietro Abate, Zak Kincaid, abate'>3</span></td><td class='duration'>≈ 60.2 months</td></tr>
+<tr><td>ocaml-monadic</td><td><span title='Anton Bachin, Zachary Palmer, zepalmer'>3</span></td><td class='duration'>≈ 1.3 months</td></tr>
+<tr><td>ocaml9p</td><td><span title='Oscar Hellstrom, Oscar Hellström, Raphaël Proust'>3</span></td><td class='duration'>≈ 85.4 months</td></tr>
+<tr><td>ocamlscript</td><td><span title='David Scott, Martin Jambon, Vincent Laporte'>3</span></td><td class='duration'>≈ 40.3 months</td></tr>
+<tr><td>ocveralls</td><td><span title='David Scott, Julien Sagot, Leonid Rozenberg'>3</span></td><td class='duration'>≈ 6.1 months</td></tr>
+<tr><td>odoc-depgraph</td><td><span title='Maxence Guesdon, Your Name, Zoggy'>3</span></td><td class='duration'>≈ 45.4 months</td></tr>
+<tr><td>oloop</td><td><span title='Ashish Agarwal, Christophe Troestler, Edgar Aroutiounian'>3</span></td><td class='duration'>≈ 4.2 months</td></tr>
+<tr><td>opamfu</td><td><span title='Christophe Troestler, David Sheets, Louis Gesbert'>3</span></td><td class='duration'>≈ 13.5 months</td></tr>
+<tr><td>optcomp</td><td><span title='Gabor Pali, Jeremie Dimino, Jérémie Dimino'>3</span></td><td class='duration'>≈ 65.9 months</td></tr>
+<tr><td>orm</td><td><span title='Anil Madhavapeddy, Thomas Gazagnaire, samoht'>3</span></td><td class='duration'>≈ 45.4 months</td></tr>
+<tr><td>pareto</td><td><span title='Nicholas Lucaroni, Rudi Grinberg, Sergei Lebedev'>3</span></td><td class='duration'>≈ 20.4 months</td></tr>
+<tr><td>perf</td><td><span title='Pierre Chambart, Vincent Bernardoff, michael'>3</span></td><td class='duration'>≈ 8.2 months</td></tr>
+<tr><td>qcheck</td><td><span title='Jacques-Pascal Deplaix, Rudi Grinberg, Simon Cruanes'>3</span></td><td class='duration'>≈ 20.4 months</td></tr>
+<tr><td>qfs</td><td><span title='Christophe Troestler, Roman Vorobets, ygrek'>3</span></td><td class='duration'>≈ 27.3 months</td></tr>
+<tr><td>qmp</td><td><span title='Dave Scott, David Scott, Euan Harris'>3</span></td><td class='duration'>≈ 14.2 months</td></tr>
+<tr><td>reedsolomon</td><td><span title='Andrew Ray, Damien Doligez, andrewray'>3</span></td><td class='duration'>≈ 11.6 months</td></tr>
+<tr><td>riak</td><td><span title='Dave Parfitt, Matthew Tovbin, Ryland Degnan'>3</span></td><td class='duration'>≈ 16.8 months</td></tr>
+<tr><td>semver</td><td><span title='David Sheets, Rudi Grinberg, Tikhon Jelvis'>3</span></td><td class='duration'>≈ 36.3 months</td></tr>
+<tr><td>sequence</td><td><span title='Drup, Simon Cruanes, carm'>3</span></td><td class='duration'>≈ 31.6 months</td></tr>
+<tr><td>sgf</td><td><span title='Vincent Bernardoff, guillemr, vb'>3</span></td><td class='duration'>≈ 77.3 months</td></tr>
+<tr><td>shared-block-ring</td><td><span title='Dave Scott, David Scott, Jon Ludlam'>3</span></td><td class='duration'>≈ 21.1 months</td></tr>
+<tr><td>slacko</td><td><span title='David Sheets, Erkki Seppälä, Marek Kubica'>3</span></td><td class='duration'>≈ 8.1 months</td></tr>
+<tr><td>sociaml-facebook-api</td><td><span title='Anil Madhavapeddy, Christophe Troestler, Dominic Price'>3</span></td><td class='duration'>≈ 16.3 months</td></tr>
+<tr><td>stringext</td><td><span title='David Sheets, Rudi Grinberg, Török Edwin'>3</span></td><td class='duration'>≈ 17.5 months</td></tr>
+<tr><td>text</td><td><span title='Jeremie Dimino, Jon Ludlam, Vincent Bernardoff'>3</span></td><td class='duration'>≈ 70.4 months</td></tr>
+<tr><td>tgls</td><td><span title='Daniel Bünzli, Jeremy Yallop, Török Edwin'>3</span></td><td class='duration'>≈ 20.1 months</td></tr>
+<tr><td>tlstunnel</td><td><span title='Anil Madhavapeddy, Christophe Troestler, Hannes Mehnert'>3</span></td><td class='duration'>≈ 4.3 months</td></tr>
+<tr><td>ucaml</td><td><span title='Francois BERENGER, Masateru Kawaguchi, 川口 順央'>3</span></td><td class='duration'>≈ 40.1 months</td></tr>
+<tr><td>usb</td><td><span title='Jeremie Dimino, Jérémie Dimino, Stephane Glondu'>3</span></td><td class='duration'>≈ 42.5 months</td></tr>
+<tr><td>xapi-backtrace</td><td><span title='Dave Scott, David Scott, Si Beaumont'>3</span></td><td class='duration'>≈ 9.9 months</td></tr>
+<tr><td>xapi-rrd-transport</td><td><span title='David Scott, John Else, sharad yadav'>3</span></td><td class='duration'>≈ 25.7 months</td></tr>
+<tr><td>xapi-rrdd-plugin</td><td><span title='David Scott, John Else, Si Beaumont'>3</span></td><td class='duration'>≈ 26.6 months</td></tr>
+<tr><td>xe</td><td><span title='Anil Madhavapeddy, Dave Scott, David Scott'>3</span></td><td class='duration'>≈ 13.2 months</td></tr>
+<tr><td>xentropyd</td><td><span title='Dave Scott, David Scott, Thomas Leonard'>3</span></td><td class='duration'>≈ 1.5 months</td></tr>
+<tr><td>xmldiff</td><td><span title='Maxence Guesdon, Zoggy, zoggy'>3</span></td><td class='duration'>≈ 8.1 months</td></tr>
+<tr><td>ISO8601</td><td><span title='Erkki Seppälä, Julien Sagot'>2</span></td><td class='duration'>≈ 3.0 months</td></tr>
+<tr><td>alberto</td><td><span title='Andrew Karlov, Sergei Lebedev'>2</span></td><td class='duration'>≈ 25.7 months</td></tr>
+<tr><td>async_graphics</td><td><span title='Anil Madhavapeddy, Leo White'>2</span></td><td class='duration'>≈ 0.6 months</td></tr>
+<tr><td>async_rpc_kernel</td><td><span title='Ben Millwood, Leo White'>2</span></td><td class='duration'>≈ 2.3 months</td></tr>
+<tr><td>avroc</td><td><span title='Sidharth Kuruvila, sidharthkuruvila'>2</span></td><td class='duration'>≈ 1.9 months</td></tr>
+<tr><td>bencode</td><td><span title='Rudi Grinberg, Simon Cruanes'>2</span></td><td class='duration'>≈ 14.2 months</td></tr>
+<tr><td>bitcoin</td><td><span title='Vincent Bernardoff, darioteixeira'>2</span></td><td class='duration'>≈ 33.4 months</td></tr>
+<tr><td>camlgpc</td><td><span title='John Whitington, johnwhitington'>2</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>camlhighlight</td><td><span title='apsheronets, darioteixeira'>2</span></td><td class='duration'>≈ 77.8 months</td></tr>
+<tr><td>camlpdf</td><td><span title='John Whitington, johnwhitington'>2</span></td><td class='duration'>≈ 23.4 months</td></tr>
+<tr><td>captureio</td><td><span title='Adriaan, sylvarant'>2</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>caravan</td><td><span title='Damien Doligez, Siraaj Khandkar'>2</span></td><td class='duration'>≈ 6.2 months</td></tr>
+<tr><td>ccss</td><td><span title='Evgenii Lepikhin, darioteixeira'>2</span></td><td class='duration'>≈ 51.6 months</td></tr>
+<tr><td>chamo</td><td><span title='Jerome Maloberti, Zoggy'>2</span></td><td class='duration'>≈ 40.5 months</td></tr>
+<tr><td>cookie-js</td><td><span title='Andrew Ray, andrewray'>2</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>crc</td><td><span title='David Scott, John Else'>2</span></td><td class='duration'>≈ 17.8 months</td></tr>
+<tr><td>crypt</td><td><span title='Anil Madhavapeddy, Vincent Bernardoff'>2</span></td><td class='duration'>≈ 13.5 months</td></tr>
+<tr><td>dht</td><td><span title='Nicolas Ojeda Bar, ygrek'>2</span></td><td class='duration'>≈ 0.3 months</td></tr>
+<tr><td>dlist</td><td><span title='BYVoid, Carbo Kuo'>2</span></td><td class='duration'>≈ 1.3 months</td></tr>
+<tr><td>dog</td><td><span title='David Sheets, Thomas Gazagnaire'>2</span></td><td class='duration'>≈ 5.0 months</td></tr>
+<tr><td>dropbox</td><td><span title='Alexandre Gravy, Christophe Troestler'>2</span></td><td class='duration'>≈ 7.3 months</td></tr>
+<tr><td>dumpast</td><td><span title='David Sheets, Thomas Gazagnaire'>2</span></td><td class='duration'>≈ 6.1 months</td></tr>
+<tr><td>erm_xml</td><td><span title='Anastasia Gornostaeva, ygrek'>2</span></td><td class='duration'>≈ 88.1 months</td></tr>
+<tr><td>erssical</td><td><span title='Zoggy, zoggy'>2</span></td><td class='duration'>≈ 12.7 months</td></tr>
+<tr><td>ezxmlm</td><td><span title='Anil Madhavapeddy, programLyrique'>2</span></td><td class='duration'>≈ 7.1 months</td></tr>
+<tr><td>ffmpeg</td><td><span title='Romain Beauxis, Samuel Mimram'>2</span></td><td class='duration'>≈ 34.9 months</td></tr>
+<tr><td>frei0r</td><td><span title='Romain Beauxis, Samuel Mimram'>2</span></td><td class='duration'>≈ 34.8 months</td></tr>
+<tr><td>gdal</td><td><span title='Hezekiah M. Carty, Jeremy Yallop'>2</span></td><td class='duration'>≈ 15.7 months</td></tr>
+<tr><td>gg</td><td><span title='Daniel Bünzli, Török Edwin'>2</span></td><td class='duration'>≈ 29.9 months</td></tr>
+<tr><td>glical</td><td><span title='Christophe Troestler, Philippe Wang'>2</span></td><td class='duration'>≈ 18.5 months</td></tr>
+<tr><td>google-drive-ocamlfuse</td><td><span title='Alessandro Strada, Vadim Atlygin'>2</span></td><td class='duration'>≈ 37.4 months</td></tr>
+<tr><td>gpr</td><td><span title='Jeff Hammerbacher, Markus Mottl'>2</span></td><td class='duration'>≈ 80.7 months</td></tr>
+<tr><td>gpx</td><td><span title='Anton Yabchinskiy, Julien Sagot'>2</span></td><td class='duration'>≈ 6.7 months</td></tr>
+<tr><td>graphicspdf</td><td><span title='John Whitington, johnwhitington'>2</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>gsasl</td><td><span title='Jeremy Yallop, Nicolas Ojeda Bar'>2</span></td><td class='duration'>≈ 12.6 months</td></tr>
+<tr><td>hamt</td><td><span title='Rudi Grinberg, Thibault Suzanne'>2</span></td><td class='duration'>≈ 33.1 months</td></tr>
+<tr><td>hardcaml</td><td><span title='Andrew Ray, andrewray'>2</span></td><td class='duration'>≈ 10.7 months</td></tr>
+<tr><td>herelib</td><td><span title='Ben Millwood, Jeremie Dimino'>2</span></td><td class='duration'>≈ 27.8 months</td></tr>
+<tr><td>hex</td><td><span title='Thomas Gazagnaire, Trevor Summers Smith'>2</span></td><td class='duration'>≈ 6.4 months</td></tr>
+<tr><td>humane-re</td><td><span title='Maverick Woo, Rudi Grinberg'>2</span></td><td class='duration'>≈ 17.2 months</td></tr>
+<tr><td>kinetic-client</td><td><span title='Kenneth Henderick, Romain Slootmaekers'>2</span></td><td class='duration'>≈ 8.2 months</td></tr>
+<tr><td>lazy-trie</td><td><span title='Anil Madhavapeddy, Thomas Gazagnaire'>2</span></td><td class='duration'>≈ 5.5 months</td></tr>
+<tr><td>lbfgs</td><td><span title='Christophe Troestler, Leonid Rozenberg'>2</span></td><td class='duration'>≈ 50.5 months</td></tr>
+<tr><td>libvhd</td><td><span title='David Scott, Jon Ludlam'>2</span></td><td class='duration'>≈ 5.7 months</td></tr>
+<tr><td>lilis</td><td><span title='Drup, Nicolas Braud-Santoni'>2</span></td><td class='duration'>≈ 36.0 months</td></tr>
+<tr><td>llvmgraph</td><td><span title='Drup, Gabriel Radanne'>2</span></td><td class='duration'>≈ 7.9 months</td></tr>
+<tr><td>merge-ropes</td><td><span title='KC Sivaramakrishnan, Thomas Gazagnaire'>2</span></td><td class='duration'>≈ 5.4 months</td></tr>
+<tr><td>merlin-acme</td><td><span title='Raphaël Proust, Simon Castellan'>2</span></td><td class='duration'>≈ 2.3 months</td></tr>
+<tr><td>mirage-profile</td><td><span title='David Scott, Thomas Leonard'>2</span></td><td class='duration'>≈ 8.2 months</td></tr>
+<tr><td>mirage-tc</td><td><span title='NASR ALLAH Mounir, Thomas Gazagnaire'>2</span></td><td class='duration'>≈ 8.7 months</td></tr>
+<tr><td>ml2mxml</td><td><span title='Ion Alberdi, yetanotherion'>2</span></td><td class='duration'>≈ 4.0 months</td></tr>
+<tr><td>modelica_ml</td><td><span title='Christoph Höger, Leonardo Laguna Ruiz'>2</span></td><td class='duration'>≈ 8.7 months</td></tr>
+<tr><td>monadlib</td><td><span title='Chattered, Phil Scott'>2</span></td><td class='duration'>≈ 23.7 months</td></tr>
+<tr><td>monomorphic</td><td><span title='Jacques-Pascal Deplaix, Rudi Grinberg'>2</span></td><td class='duration'>≈ 17.2 months</td></tr>
+<tr><td>mqtt_client</td><td><span title='Phil Tomson, PhilTomson'>2</span></td><td class='duration'>≈ 2.5 months</td></tr>
+<tr><td>mtime</td><td><span title='Daniel Bünzli, David Scott'>2</span></td><td class='duration'>≈ 2.4 months</td></tr>
+<tr><td>mysql_protocol</td><td><span title='Stéphane, Stéphane Legrand'>2</span></td><td class='duration'>≈ 3.7 months</td></tr>
+<tr><td>nanomsg</td><td><span title='Rudi Grinberg, Vincent Bernardoff'>2</span></td><td class='duration'>≈ 21.3 months</td></tr>
+<tr><td>ocaml+twt</td><td><span title='Michael Lin, Mike Lin'>2</span></td><td class='duration'>≈ 58.0 months</td></tr>
+<tr><td>ocaml-arg</td><td><span title='Thomas Gazagnaire, Vincent Bernardoff'>2</span></td><td class='duration'>≈ 6.0 months</td></tr>
+<tr><td>ocaml-top</td><td><span title='Fabrice Le Fessant, Louis Gesbert'>2</span></td><td class='duration'>≈ 23.1 months</td></tr>
+<tr><td>ocamldiff</td><td><span title='Your Name, Zoggy'>2</span></td><td class='duration'>≈ 14.0 months</td></tr>
+<tr><td>ocamlfind-lint</td><td><span title='Maxence Guesdon, Zoggy'>2</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>ocamlrss</td><td><span title='Christophe Troestler, Zoggy'>2</span></td><td class='duration'>≈ 16.3 months</td></tr>
+<tr><td>ocephes</td><td><span title='Christophe Troestler, Leonid Rozenberg'>2</span></td><td class='duration'>≈ 0.4 months</td></tr>
+<tr><td>ocf</td><td><span title='Leo Wzukw, Zoggy'>2</span></td><td class='duration'>≈ 3.3 months</td></tr>
+<tr><td>oclaunch</td><td><span title='Leo, leowzukw'>2</span></td><td class='duration'>≈ 11.3 months</td></tr>
+<tr><td>oclock</td><td><span title='David Scott, Mickaël Delahaye'>2</span></td><td class='duration'>≈ 44.4 months</td></tr>
+<tr><td>ocp-ocamlres</td><td><span title='Benjamin Canou, Pierre Chambart'>2</span></td><td class='duration'>≈ 19.0 months</td></tr>
+<tr><td>odiff-gtk</td><td><span title='Maxence Guesdon, zoggy'>2</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>oolc</td><td><span title='Alix Trieu, atrieu'>2</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>opam-query</td><td><span title='Peter Zotov, whitequark'>2</span></td><td class='duration'>≈ 9.1 months</td></tr>
+<tr><td>opus</td><td><span title='Romain Beauxis, Samuel Mimram'>2</span></td><td class='duration'>≈ 35.2 months</td></tr>
+<tr><td>orocksdb</td><td><span title='Jan Doms, Romain Slootmaekers'>2</span></td><td class='duration'>≈ 9.7 months</td></tr>
+<tr><td>otfm</td><td><span title='Daniel Bünzli, pveber'>2</span></td><td class='duration'>≈ 14.3 months</td></tr>
+<tr><td>otr</td><td><span title='Hannes Mehnert, Nicolas Pouillard'>2</span></td><td class='duration'>≈ 10.0 months</td></tr>
+<tr><td>pa_structural_sexp</td><td><span title='Ben Millwood, Leo White'>2</span></td><td class='duration'>≈ 2.1 months</td></tr>
+<tr><td>pci</td><td><span title='Jon Ludlam, Si Beaumont'>2</span></td><td class='duration'>≈ 1.7 months</td></tr>
+<tr><td>pcre</td><td><span title='Markus Mottl, Martin Jambon'>2</span></td><td class='duration'>≈ 113.3 months</td></tr>
+<tr><td>ppx_deriving_protobuf</td><td><span title='Peter Zotov, whitequark'>2</span></td><td class='duration'>≈ 16.0 months</td></tr>
+<tr><td>ppx_getenv</td><td><span title='Peter Zotov, whitequark'>2</span></td><td class='duration'>≈ 16.2 months</td></tr>
+<tr><td>ppx_import</td><td><span title='Peter Zotov, whitequark'>2</span></td><td class='duration'>≈ 12.7 months</td></tr>
+<tr><td>profound</td><td><span title='Kaustuv CHAUDHURI, Kaustuv Chaudhuri'>2</span></td><td class='duration'>≈ 6.5 months</td></tr>
+<tr><td>qocamlbrowser</td><td><span title='gasche, kakadu'>2</span></td><td class='duration'>≈ 10.2 months</td></tr>
+<tr><td>ranger</td><td><span title='Drup, Rudi Grinberg'>2</span></td><td class='duration'>≈ 18.5 months</td></tr>
+<tr><td>rawlink</td><td><span title='Christiano F. Haesbaert, Christiano Haesbaert'>2</span></td><td class='duration'>≈ 1.7 months</td></tr>
+<tr><td>rdr</td><td><span title='Matthew Barney, m4b'>2</span></td><td class='duration'>≈ 5.9 months</td></tr>
+<tr><td>records</td><td><span title='Etienne Millon, Jeremy Yallop'>2</span></td><td class='duration'>≈ 1.1 months</td></tr>
+<tr><td>result</td><td><span title='Ben Millwood, Jeremie Dimino'>2</span></td><td class='duration'>≈ 6.1 months</td></tr>
+<tr><td>riak-pb</td><td><span title='Dave Parfitt, Ryland Degnan'>2</span></td><td class='duration'>≈ 2.5 months</td></tr>
+<tr><td>rresult</td><td><span title='Daniel Bünzli, Hezekiah M. Carty'>2</span></td><td class='duration'>≈ 5.7 months</td></tr>
+<tr><td>safepass</td><td><span title='Jonathan Curran, darioteixeira'>2</span></td><td class='duration'>≈ 25.7 months</td></tr>
+<tr><td>sill</td><td><span title='Dennis Griffith, Frank Pfenning'>2</span></td><td class='duration'>≈ 7.5 months</td></tr>
+<tr><td>smart-print</td><td><span title='Guillaume Claret, Sebastien Mondet'>2</span></td><td class='duration'>≈ 20.2 months</td></tr>
+<tr><td>smtp</td><td><span title='Anil Madhavapeddy, Vincent Bernardoff'>2</span></td><td class='duration'>≈ 13.6 months</td></tr>
+<tr><td>sociaml-vcard</td><td><span title='Dominic Price, pszdp1'>2</span></td><td class='duration'>≈ 1.4 months</td></tr>
+<tr><td>sonet</td><td><span title='Prashanth Mundkur, pmundkur'>2</span></td><td class='duration'>≈ 62.0 months</td></tr>
+<tr><td>sqlite3EZ</td><td><span title='Michael Lin, Mike Lin'>2</span></td><td class='duration'>≈ 36.3 months</td></tr>
+<tr><td>statsd-client</td><td><span title='Martin Jambon, Matthew Tovbin'>2</span></td><td class='duration'>≈ 7.9 months</td></tr>
+<tr><td>stemming</td><td><span title='Mykola Stryebkov, ygrek'>2</span></td><td class='duration'>≈ 8.1 months</td></tr>
+<tr><td>stog-rdf</td><td><span title='Maxence Guesdon, Zoggy'>2</span></td><td class='duration'>≈ 31.6 months</td></tr>
+<tr><td>taglog</td><td><span title='Maxence Guesdon, Zoggy'>2</span></td><td class='duration'>≈ 0.4 months</td></tr>
+<tr><td>tdk</td><td><span title='Jeff Hammerbacher, Spiros Eliopoulos'>2</span></td><td class='duration'>≈ 1.2 months</td></tr>
+<tr><td>termbox</td><td><span title='Nick Zalutskiy, Nikolay Zalutskiy'>2</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>themoviedb</td><td><span title='Marc Simon, Simon Marc'>2</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>user-setup</td><td><span title='Drup, Louis Gesbert'>2</span></td><td class='duration'>≈ 8.7 months</td></tr>
+<tr><td>uutf</td><td><span title='Daniel Bünzli, Török Edwin'>2</span></td><td class='duration'>≈ 35.3 months</td></tr>
+<tr><td>uwt</td><td><span title='arirux, fdopen'>2</span></td><td class='duration'>≈ 4.8 months</td></tr>
+<tr><td>vector3</td><td><span title='Francois Berenger, blue-prawn'>2</span></td><td class='duration'>≈ 0.6 months</td></tr>
+<tr><td>vg</td><td><span title='Arthur Wendling, Daniel Bünzli'>2</span></td><td class='duration'>≈ 29.2 months</td></tr>
+<tr><td>vhdlib</td><td><span title='David Scott, Jon Ludlam'>2</span></td><td class='duration'>≈ 5.7 months</td></tr>
+<tr><td>voaacenc</td><td><span title='Romain Beauxis, Samuel Mimram'>2</span></td><td class='duration'>≈ 52.9 months</td></tr>
+<tr><td>webmachine</td><td><span title='Christophe Troestler, Spiros Eliopoulos'>2</span></td><td class='duration'>≈ 5.3 months</td></tr>
+<tr><td>wiringpi</td><td><span title='Marek Kubica, Tobias Bora'>2</span></td><td class='duration'>≈ 11.6 months</td></tr>
+<tr><td>xe-unikernel-upload</td><td><span title='Dave Scott, David Scott'>2</span></td><td class='duration'>≈ 9.9 months</td></tr>
+<tr><td>xen-evtchn</td><td><span title='Dave Scott, David Scott'>2</span></td><td class='duration'>≈ 13.1 months</td></tr>
+<tr><td>TestSimple</td><td><span title='Hezekiah M. Carty'>1</span></td><td class='duration'>≈ 31.0 months</td></tr>
+<tr><td>ackdo-reloaded</td><td><span title='Rudi Grinberg'>1</span></td><td class='duration'>≈ 9.1 months</td></tr>
+<tr><td>acme</td><td><span title='Raphaël Proust'>1</span></td><td class='duration'>≈ 2.2 months</td></tr>
+<tr><td>acpc</td><td><span title='Francois Berenger'>1</span></td><td class='duration'>≈ 2.3 months</td></tr>
+<tr><td>ago</td><td><span title='Christian Lindig'>1</span></td><td class='duration'>≈ 3.7 months</td></tr>
+<tr><td>aifad</td><td><span title='Markus Mottl'>1</span></td><td class='duration'>≈ 99.8 months</td></tr>
+<tr><td>aliases</td><td><span title='Hugo Heuzard'>1</span></td><td class='duration'>≈ 16.5 months</td></tr>
+<tr><td>ascii85</td><td><span title='Christian Lindig'>1</span></td><td class='duration'>≈ 3.1 months</td></tr>
+<tr><td>async-mvar</td><td><span title='Rudi Grinberg'>1</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>async-zmq</td><td><span title='Rudi Grinberg'>1</span></td><td class='duration'>≈ 30.8 months</td></tr>
+<tr><td>bencode_rpc</td><td><span title='Simon Cruanes'>1</span></td><td class='duration'>≈ 13.8 months</td></tr>
+<tr><td>bookaml</td><td><span title='darioteixeira'>1</span></td><td class='duration'>≈ 58.6 months</td></tr>
+<tr><td>broken</td><td><span title='Michael Grünewald'>1</span></td><td class='duration'>≈ 21.6 months</td></tr>
+<tr><td>bt</td><td><span title='Nicolas Ojeda Bar'>1</span></td><td class='duration'>≈ 21.6 months</td></tr>
+<tr><td>camldm</td><td><span title='Jon Ludlam'>1</span></td><td class='duration'>≈ 10.4 months</td></tr>
+<tr><td>camlprime</td><td><span title='Erik L. Arneson'>1</span></td><td class='duration'>≈ 1.1 months</td></tr>
+<tr><td>cbor</td><td><span title='ygrek'>1</span></td><td class='duration'>≈ 1.3 months</td></tr>
+<tr><td>cconv</td><td><span title='Simon Cruanes'>1</span></td><td class='duration'>≈ 10.9 months</td></tr>
+<tr><td>cfg</td><td><span title='Markus Mottl'>1</span></td><td class='duration'>≈ 102.8 months</td></tr>
+<tr><td>choice</td><td><span title='Simon Cruanes'>1</span></td><td class='duration'>≈ 18.3 months</td></tr>
+<tr><td>cmitomli</td><td><span title='Martin Jambon'>1</span></td><td class='duration'>≈ 27.8 months</td></tr>
+<tr><td>coccinelle</td><td><span title='Coccinelle'>1</span></td><td class='duration'>≈ 59.4 months</td></tr>
+<tr><td>cryptohash</td><td><span title='arirux'>1</span></td><td class='duration'>≈ 5.1 months</td></tr>
+<tr><td>datalog</td><td><span title='Simon Cruanes'>1</span></td><td class='duration'>≈ 11.9 months</td></tr>
+<tr><td>dbforge</td><td><span title='Zoggy'>1</span></td><td class='duration'>≈ 30.7 months</td></tr>
+<tr><td>decompress</td><td><span title='Romain Calascibetta'>1</span></td><td class='duration'>≈ 4.2 months</td></tr>
+<tr><td>deriving-yojson</td><td><span title='Hugo Heuzard'>1</span></td><td class='duration'>≈ 7.7 months</td></tr>
+<tr><td>dnscurve</td><td><span title='David Sheets'>1</span></td><td class='duration'>≈ 18.1 months</td></tr>
+<tr><td>dockerfile</td><td><span title='Anil Madhavapeddy'>1</span></td><td class='duration'>≈ 2.7 months</td></tr>
+<tr><td>elf2json</td><td><span title='m4b'>1</span></td><td class='duration'>≈ 0.4 months</td></tr>
+<tr><td>enumerators</td><td><span title='Bertrand Bonnefoy-Claudet'>1</span></td><td class='duration'>≈ 0.7 months</td></tr>
+<tr><td>erm_xmpp</td><td><span title='Anastasia Gornostaeva'>1</span></td><td class='duration'>≈ 121.1 months</td></tr>
+<tr><td>exn-source</td><td><span title='John Whitington'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>fluent-logger</td><td><span title='Mitsunori Komatsu'>1</span></td><td class='duration'>≈ 8.7 months</td></tr>
+<tr><td>forkwork</td><td><span title='Mike Lin'>1</span></td><td class='duration'>≈ 4.5 months</td></tr>
+<tr><td>fstreams</td><td><span title='Joseph Abrahamson'>1</span></td><td class='duration'>≈ 0.2 months</td></tr>
+<tr><td>gedcom</td><td><span title='Julien Sagot'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>genspir</td><td><span title='Francois Berenger'>1</span></td><td class='duration'>≈ 7.8 months</td></tr>
+<tr><td>gensqlite</td><td><span title='Josh Allmann'>1</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>gnuplot</td><td><span title='Oliver Gu'>1</span></td><td class='duration'>≈ 14.7 months</td></tr>
+<tr><td>grib</td><td><span title='Hezekiah M. Carty'>1</span></td><td class='duration'>≈ 36.6 months</td></tr>
+<tr><td>gtk-light</td><td><span title='Hezekiah M. Carty'>1</span></td><td class='duration'>≈ 54.5 months</td></tr>
+<tr><td>gxl-light</td><td><span title='Avinash Malik'>1</span></td><td class='duration'>≈ 20.8 months</td></tr>
+<tr><td>hardcaml-examples</td><td><span title='andrewray'>1</span></td><td class='duration'>≈ 2.7 months</td></tr>
+<tr><td>hardcaml-llvmsim</td><td><span title='andrewray'>1</span></td><td class='duration'>≈ 0.3 months</td></tr>
+<tr><td>hardcaml-reedsolomon</td><td><span title='andrewray'>1</span></td><td class='duration'>≈ 2.0 months</td></tr>
+<tr><td>hardcaml-vpi</td><td><span title='andrewray'>1</span></td><td class='duration'>≈ 2.1 months</td></tr>
+<tr><td>hardcaml-waveterm</td><td><span title='andrewray'>1</span></td><td class='duration'>≈ 2.2 months</td></tr>
+<tr><td>hashcons</td><td><span title='Jean-Christophe Filliatre'>1</span></td><td class='duration'>≈ 9.8 months</td></tr>
+<tr><td>ibx</td><td><span title='Oliver Gu'>1</span></td><td class='duration'>≈ 28.6 months</td></tr>
+<tr><td>indexmap</td><td><span title='Hezekiah M. Carty'>1</span></td><td class='duration'>≈ 11.5 months</td></tr>
+<tr><td>irmin-indexeddb</td><td><span title='Thomas Leonard'>1</span></td><td class='duration'>≈ 2.1 months</td></tr>
+<tr><td>itv-tree</td><td><span title='Francois Berenger'>1</span></td><td class='duration'>≈ 25.6 months</td></tr>
+<tr><td>joolog</td><td><span title='Hugo Heuzard'>1</span></td><td class='duration'>≈ 8.1 months</td></tr>
+<tr><td>jsondiff</td><td><span title='John Chee'>1</span></td><td class='duration'>≈ 2.1 months</td></tr>
+<tr><td>jsonm</td><td><span title='Daniel Bünzli'>1</span></td><td class='duration'>≈ 31.4 months</td></tr>
+<tr><td>kafka</td><td><span title='Didier Wenzek'>1</span></td><td class='duration'>≈ 8.6 months</td></tr>
+<tr><td>lacc</td><td><span title='Francois Berenger'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>libevent</td><td><span title='ygrek'>1</span></td><td class='duration'>≈ 64.6 months</td></tr>
+<tr><td>lipsum</td><td><span title='Christian Lindig'>1</span></td><td class='duration'>≈ 34.5 months</td></tr>
+<tr><td>litiom</td><td><span title='darioteixeira'>1</span></td><td class='duration'>≈ 86.9 months</td></tr>
+<tr><td>lpd</td><td><span title='Christophe Troestler'>1</span></td><td class='duration'>≈ 78.8 months</td></tr>
+<tr><td>lwt-binio</td><td><span title='Hezekiah M. Carty'>1</span></td><td class='duration'>≈ 9.6 months</td></tr>
+<tr><td>macaroons</td><td><span title='Nicolas Ojeda Bar'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>magic-mime</td><td><span title='Anil Madhavapeddy'>1</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>maildir</td><td><span title='Nicolas Ojeda Bar'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>merge-queues</td><td><span title='Thomas Gazagnaire'>1</span></td><td class='duration'>≈ 9.3 months</td></tr>
+<tr><td>mirage-block-ccm</td><td><span title='Stefan Grundmann'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>mirage-bootvar-xen</td><td><span title='Magnus Skjegstad'>1</span></td><td class='duration'>≈ 1.1 months</td></tr>
+<tr><td>mirage-flow</td><td><span title='Thomas Gazagnaire'>1</span></td><td class='duration'>≈ 5.1 months</td></tr>
+<tr><td>mirage-http-xen</td><td><span title='Anil Madhavapeddy'>1</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>mirage-vnetif</td><td><span title='Magnus Skjegstad'>1</span></td><td class='duration'>≈ 4.1 months</td></tr>
+<tr><td>mirror</td><td><span title='Anil Madhavapeddy'>1</span></td><td class='duration'>≈ 6.7 months</td></tr>
+<tr><td>more-ocaml</td><td><span title='John Whitington'>1</span></td><td class='duration'>≈ 1.9 months</td></tr>
+<tr><td>mparser</td><td><span title='Max Mouratov'>1</span></td><td class='duration'>≈ 30.4 months</td></tr>
+<tr><td>mpi</td><td><span title='Francois Berenger'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>mpris</td><td><span title='John Else'>1</span></td><td class='duration'>≈ 15.7 months</td></tr>
+<tr><td>mqtt</td><td><span title='Josh Allmann'>1</span></td><td class='duration'>≈ 8.2 months</td></tr>
+<tr><td>mstruct</td><td><span title='Thomas Gazagnaire'>1</span></td><td class='duration'>≈ 12.2 months</td></tr>
+<tr><td>mtl</td><td><span title='Rudi Grinberg'>1</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>mybuild</td><td><span title='ygrek'>1</span></td><td class='duration'>≈ 2.2 months</td></tr>
+<tr><td>nebula</td><td><span title='Jesse Haber-Kucharsky'>1</span></td><td class='duration'>≈ 27.9 months</td></tr>
+<tr><td>obeanstalk</td><td><span title='Rudi Grinberg'>1</span></td><td class='duration'>≈ 9.3 months</td></tr>
+<tr><td>ocaml-systemd</td><td><span title='Juergen Hoetzel'>1</span></td><td class='duration'>≈ 1.0 months</td></tr>
+<tr><td>ocamlbuild-atdgen</td><td><span title='Rudi Grinberg'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>odate</td><td><span title='Hugo Heuzard'>1</span></td><td class='duration'>≈ 12.5 months</td></tr>
+<tr><td>odisco</td><td><span title='pmundkur'>1</span></td><td class='duration'>≈ 30.7 months</td></tr>
+<tr><td>ojs-base</td><td><span title='Zoggy'>1</span></td><td class='duration'>≈ 9.8 months</td></tr>
+<tr><td>opasswd</td><td><span title='Mike McClurg'>1</span></td><td class='duration'>≈ 0.7 months</td></tr>
+<tr><td>oplay</td><td><span title='andrewray'>1</span></td><td class='duration'>≈ 0.2 months</td></tr>
+<tr><td>osm_xml</td><td><span title='aluuu'>1</span></td><td class='duration'>≈ 0.9 months</td></tr>
+<tr><td>pa_comprehension</td><td><span title='Max Mouratov'>1</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>pa_qualified</td><td><span title='Max Mouratov'>1</span></td><td class='duration'>≈ 1.6 months</td></tr>
+<tr><td>pa_solution</td><td><span title='Max Mouratov'>1</span></td><td class='duration'>≈ 22.9 months</td></tr>
+<tr><td>pa_where</td><td><span title='Max Mouratov'>1</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>pcf-format</td><td><span title='David Scott'>1</span></td><td class='duration'>≈ 0.6 months</td></tr>
+<tr><td>pci-db</td><td><span title='Si Beaumont'>1</span></td><td class='duration'>≈ 20.2 months</td></tr>
+<tr><td>podge</td><td><span title='Edgar Aroutiounian'>1</span></td><td class='duration'>≈ 0.8 months</td></tr>
+<tr><td>polyglot</td><td><span title='David Sheets'>1</span></td><td class='duration'>≈ 2.8 months</td></tr>
+<tr><td>pomap</td><td><span title='Markus Mottl'>1</span></td><td class='duration'>≈ 102.8 months</td></tr>
+<tr><td>ppx_bigarray</td><td><span title='Akinori ABE'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>ppx_blob</td><td><span title='John Whitington'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>ppx_include</td><td><span title='Peter Zotov'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>proj4ml</td><td><span title='Hezekiah M. Carty'>1</span></td><td class='duration'>≈ 46.5 months</td></tr>
+<tr><td>qrencode</td><td><span title='Vincent Bernardoff'>1</span></td><td class='duration'>≈ 0.2 months</td></tr>
+<tr><td>rdbg</td><td><span title='Erwan Jahier'>1</span></td><td class='duration'>≈ 21.0 months</td></tr>
+<tr><td>react</td><td><span title='Daniel Bünzli'>1</span></td><td class='duration'>≈ 69.4 months</td></tr>
+<tr><td>receive-mail</td><td><span title='Dominic Price'>1</span></td><td class='duration'>≈ 8.6 months</td></tr>
+<tr><td>res</td><td><span title='Markus Mottl'>1</span></td><td class='duration'>≈ 105.1 months</td></tr>
+<tr><td>rfc6287</td><td><span title='Stefan Grundmann'>1</span></td><td class='duration'>≈ 0.6 months</td></tr>
+<tr><td>river</td><td><span title='KC Sivaramakrishnan'>1</span></td><td class='duration'>≈ 1.1 months</td></tr>
+<tr><td>rtime</td><td><span title='Daniel Bünzli'>1</span></td><td class='duration'>≈ 74.6 months</td></tr>
+<tr><td>scrypt</td><td><span title='Nikolay Zalutskiy'>1</span></td><td class='duration'>≈ 0.2 months</td></tr>
+<tr><td>should</td><td><span title='Mike Lin'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>simple-bmc</td><td><span title='Wei Chen'>1</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>slap</td><td><span title='Akinori ABE'>1</span></td><td class='duration'>≈ 18.0 months</td></tr>
+<tr><td>sociaml-oauth-client</td><td><span title='Dominic Price'>1</span></td><td class='duration'>≈ 14.3 months</td></tr>
+<tr><td>sociaml-tumblr-api</td><td><span title='Dominic Price'>1</span></td><td class='duration'>≈ 5.1 months</td></tr>
+<tr><td>spatial_index</td><td><span title='aluuu'>1</span></td><td class='duration'>≈ 1.2 months</td></tr>
+<tr><td>spelll</td><td><span title='Simon Cruanes'>1</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>spotify-cli</td><td><span title='John Else'>1</span></td><td class='duration'>≈ 33.4 months</td></tr>
+<tr><td>spotify-web-api</td><td><span title='John Else'>1</span></td><td class='duration'>≈ 3.3 months</td></tr>
+<tr><td>stemmer</td><td><span title='Erik L. Arneson'>1</span></td><td class='duration'>≈ 50.0 months</td></tr>
+<tr><td>stog-writing</td><td><span title='Zoggy'>1</span></td><td class='duration'>≈ 38.4 months</td></tr>
+<tr><td>stone</td><td><span title='Armael'>1</span></td><td class='duration'>≈ 26.5 months</td></tr>
+<tr><td>textwrap</td><td><span title='Sergei Lebedev'>1</span></td><td class='duration'>≈ 39.1 months</td></tr>
+<tr><td>tftp</td><td><span title='Richard Mortier'>1</span></td><td class='duration'>≈ 1.6 months</td></tr>
+<tr><td>thrift</td><td><span title='Vincent Bernardoff'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>tptp</td><td><span title='Radek Micek'>1</span></td><td class='duration'>≈ 20.5 months</td></tr>
+<tr><td>travis-senv</td><td><span title='Anil Madhavapeddy'>1</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>udunits</td><td><span title='Hezekiah M. Carty'>1</span></td><td class='duration'>≈ 11.8 months</td></tr>
+<tr><td>uucd</td><td><span title='Daniel Bünzli'>1</span></td><td class='duration'>≈ 34.1 months</td></tr>
+<tr><td>uucp</td><td><span title='Daniel Bünzli'>1</span></td><td class='duration'>≈ 14.2 months</td></tr>
+<tr><td>uuidm</td><td><span title='Daniel Bünzli'>1</span></td><td class='duration'>≈ 69.0 months</td></tr>
+<tr><td>uunf</td><td><span title='Daniel Bünzli'>1</span></td><td class='duration'>≈ 33.8 months</td></tr>
+<tr><td>uuseg</td><td><span title='Daniel Bünzli'>1</span></td><td class='duration'>≈ 5.9 months</td></tr>
+<tr><td>vmnet</td><td><span title='Anil Madhavapeddy'>1</span></td><td class='duration'>≈ 0.1 months</td></tr>
+<tr><td>wget</td><td><span title='Thomas Gazagnaire'>1</span></td><td class='duration'>≈ 0.0 months</td></tr>
+<tr><td>xenbigarray</td><td><span title='Anil Madhavapeddy'>1</span></td><td class='duration'>≈ 0.2 months</td></tr>
+<tr><td>xmlm</td><td><span title='Daniel Bünzli'>1</span></td><td class='duration'>≈ 96.2 months</td></tr>
+</table>
+</body>
+</html>
